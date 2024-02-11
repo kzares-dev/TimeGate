@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*-- Body styles & body backdrop --*/
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow: auto;
+}
+
+body:before {
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  position: absolute;
+  content: "";
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+body:after {
+  content: "";
+  background-image: url("/images/grid.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  z-index: -1;
+  filter: invert(1);
+}
+
+.note-card {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#aaa 10%, #fff 10%),
+    linear-gradient(to right, #000 10%, #c73030 10% 10.2%, #000 10.5%);
+  background-size: 100% 25px, 100% 100%;
+  background-repeat: repeat, no-repeat;
+  /* Add your background pattern here */
+}
+
+
+
+.gradient-01 {
+  position: fixed;
+  width: 404px;
+  height: 800px;
+  left: 20%;
+  top: 5%;
+  opacity: 0.2;
+  z-index: 1;
+
+  background: rgba(149, 66, 232, 0.35);
+  filter: blur(175px);
+  transform: rotate(-114.2deg);
+}
+
+.gradient-02 {
+  opacity: 0.2;
+  z-index: 1;
+  position: fixed;
+  width: 304px;
+  height: 100vh;
+  left: 30%;
+  top: 10%;
+
+  background: rgba(45, 72, 152, 0.75);
+  filter: blur(200px);
+  transform: rotate(-53.13deg);
+}
+
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  max-width: 640px;
+  background-image: radial-gradient(
+      at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%
+    ),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.15;
+}
+
+@layer base {
+  .flex-center {
+    @apply flex items-center justify-center
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between
+  }
+
+  .container {
+    @apply max-w-[1600px] w-full mx-auto
+  }
+
+  .big-border {
+    @apply rounded-lg border border-b-[3px] border-r-[3px] border-gray-700 px-2 py-1 md:block dark:border-white shadow-sm
+  }
+  .md-border {
+    @apply rounded-lg border border-b-[2px] border-r-[2px]  border-gray-500 px-2 py-1 md:block dark:border-white shadow-sm
+  }
+
+  .font-kalam {
+    @apply font-[Kalam]
+  }
+
+  .button {
+    @apply rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px] md:block dark:border-white cursor-pointer w-auto
+  }
+
+  
+}
