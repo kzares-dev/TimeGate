@@ -6,7 +6,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="min-h-[100vh] main ">
+    <div className="min-h-[100vh] main pt-[100px]">
       <Navbar />
       {children}
     </div>

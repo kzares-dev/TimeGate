@@ -14,7 +14,7 @@ function Quiz() {
                 <div className="flex flex-between px-10 w-full">
                     <h2 className="mr-2 text-[60px] font-kalam font-bold tracking-tight">Mesopotamic Era</h2>
 
-                    <div className="bg-gray-50 flex flex-row gap-5  h-[50px] relative">
+                    <div className="bg-gray-50 flex flex-row gap-5  h-[50px] relative ">
                         
                         <div className="flex flex-row">
                             <Image alt="" width={50} height={40} src="/icons/success.png"  />
