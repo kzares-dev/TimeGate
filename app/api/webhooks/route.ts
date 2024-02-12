@@ -1,7 +1,7 @@
 import { Webhook } from 'svix'
 import { headers } from 'next/headers'
 import { WebhookEvent } from '@clerk/nextjs/server'
-//import { createUser } from '@/lib/actions/user.action'
+import { createUser } from '@/lib/actions/user.action'
 import { clerkClient } from '@clerk/nextjs'
 import { NextResponse } from 'next/server'
 
@@ -66,17 +66,13 @@ export async function POST(req: Request) {
             _id: "culos"
         }
 
-        if(newUser) {
+        await clerkClient.users.updateUserMetadata(id, {
+            publicMetadata: {
+                userId: newUser._id
+            }
+        })
 
-            await clerkClient.users.updateUserMetadata(id, {
-                publicMetadata: {
-                    userId: newUser._id
-                }
-            })
-
-        }
-
-        return NextResponse.json({ message: 'OK', user: newUser})
+        return NextResponse.json({ message: 'OK', user: newUser })
 
     }
 
