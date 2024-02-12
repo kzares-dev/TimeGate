@@ -1,16 +1,33 @@
 "use client";
+import { createUser } from "@/lib/actions/user.action";
 import { motion } from "framer-motion"
+import { useEffect } from "react";
 
 interface Props {
   index: number,
 }
 
 function QuizChoice({ index }: Props) {
+
+
+  useEffect(() => {
+
+    const user = createUser({
+      clerkId: "akmlc",
+      email: "string",
+      username: "string",
+      photo: "string",
+    })
+    .then((data) => console.log(data))
+    .catch(err => console.log(err))
+
+  }, [])
+
   return (
     <motion.div
       initial={{ y: "40px", opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ type: "spring", delay: index/5, duration: 1 }}
+      transition={{ type: "spring", delay: index / 5, duration: 1 }}
 
       className="w-full flex flex-row py-5 px-1 items-center cursor-pointer">
 
