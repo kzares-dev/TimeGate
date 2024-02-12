@@ -3,7 +3,6 @@ import SandClock from '@/components/SandClock'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, spring } from 'framer-motion'
-import { slideIn } from '@/utils/motion'
 
 function Home() {
   return (

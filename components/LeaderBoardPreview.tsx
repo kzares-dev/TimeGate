@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { leaderBoard } from "@/utils/mockData"
+import { leaderBoard } from "@/lib/mockData"
 
 function LeaderBoardPreview() {
   return (
