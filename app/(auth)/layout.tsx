@@ -18,8 +18,9 @@ export default function RootLayout({
 }) {
   return (
 
-    <html lang='en'>
-      <body className="fixed w-full h-screen z-[100] flex-center">{children}</body>
-    </html>
+    <div className="absolute inset-0 w-full h-screen z-[100] flex-center">
+      <div className="back-gradient -z-1" />
+      {children}
+    </div>
   );
 }

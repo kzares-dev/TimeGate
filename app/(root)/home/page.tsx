@@ -6,7 +6,7 @@ import React from 'react'
 
 function Home() {
   return (
-    <main className="p-8 mx-auto container g">
+    <main className="p-8 mx-auto container pt-[100px]">
       <div className="flex items-center">
         <h2 className="mr-2 text-[90px] font-kalam font-bold tracking-tight">Dashboard</h2>
         <button className='big-border text-[20px] px-5' > Details </button>
