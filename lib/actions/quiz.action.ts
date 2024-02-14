@@ -52,12 +52,20 @@ export async function getQuizById(quizId: string) {
             return {
                 title: 'Quiz de Historia Antigua',
                 category: 'Historia',
-                questions: 10,
+                questions: 2,
                 value: 100,
-                data: {
-                    difficulty: 'Intermedio',
-                    topics: ['Egipto', 'Grecia', 'Roma']
-                }
+                questionsList: [
+                    {
+                        quizQuestion: "What is the capital of France?",
+                        totalQuestions: 5,
+                        quizOptions: ["Paris", "London", "Berlin", "Madrid"],
+                    },
+                    {
+                        quizQuestion: "What is the capital of France?",
+                        totalQuestions: 5,
+                        quizOptions: ["Paris", "London", "Berlin", "Madrid"],
+                    },
+                ]
             }
         }
 
