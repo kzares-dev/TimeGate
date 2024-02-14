@@ -1,8 +1,9 @@
 import Image from "next/image"
+import Link from "next/link"
 
 function QuizHome() {
     return (
-        <main className="container mt-[100px] lg:mt-0 lg:flex-center min-h-[100vh]">
+        <main className="relative container mt-[100px] lg:mt-0 lg:flex-center min-h-[100vh]">
 
             <div className="lg:-mt-[10vh] flex flex-col gap-4">
 
@@ -37,13 +38,13 @@ function QuizHome() {
                 </div>
                 <div className="grid gap-4 mt-4 md:grid-cols-2 pb-10 lg:pb-1">
 
-                    <div className='flex-1 flex flex-col bg-gray-50 shadow-sm md-border  px-5 py-5 gap-2 relative' >
+                    <Link href="/library" className='cursor-pointer flex-1 flex flex-col bg-gray-50 shadow-sm md-border  px-5 py-5 gap-2 relative' >
 
                         <h1 className='text-4xl font-kalam font-semibold'>Libreria de Historia</h1>
                         <p className='text-lg font-mono leading-tight'>Selecciona un desafio sobre tu epoca favorita</p>
                         <Image className='absolute top-4 right-4' alt='' src='/icons/library.svg' width={40} height={40} />
 
-                    </div>
+                    </Link>
 
                     <div className='flex-1 flex flex-col bg-gray-50 shadow-sm md-border  px-5 py-5 gap-2 relative' >
 
