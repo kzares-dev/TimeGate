@@ -1,7 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
 
-function QuizHome() {
+async function QuizHome(){
+
+
     return (
         <main className="relative container mt-[100px] lg:mt-0 lg:flex-center min-h-[100vh]">
 

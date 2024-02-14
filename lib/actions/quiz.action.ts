@@ -41,3 +41,28 @@ export async function getLibrary() {
         handleError(error)
     }
 }
+
+export async function getQuizById(quizId: string) {
+    try {
+        await connectToDatabase();
+
+        const quiz = await Quiz.findById(quizId);
+
+        if (!quiz) {
+            return {
+                title: 'Quiz de Historia Antigua',
+                category: 'Historia',
+                questions: 10,
+                value: 100,
+                data: {
+                    difficulty: 'Intermedio',
+                    topics: ['Egipto', 'Grecia', 'Roma']
+                }
+            }
+        }
+
+        return JSON.parse(JSON.stringify(quiz));
+    } catch (error) {
+        handleError(error);
+    }
+}
