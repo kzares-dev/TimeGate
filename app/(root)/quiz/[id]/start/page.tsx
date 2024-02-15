@@ -1,7 +1,8 @@
 "use client";
 import { getQuizById } from "@/lib/actions/quiz.action";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Quiz from "@/components/Quiz"
+import { formatTime } from "@/lib/utils";
 
 function QuizWatcher({ params }: { params: { id: string } }) {
 
@@ -9,22 +10,48 @@ function QuizWatcher({ params }: { params: { id: string } }) {
     const [quiz, setQuiz] = useState<any>({
         currentQuestion: 1,
         selectedOption: null,
-        currentTime: 0,
         answers: []
     });
+
 
     // TODO: implement the correct types for all this 
 
 
+    // states all related to current time
+    const [currentTime, setCurrentTime] = useState(0);
+    const [parsedCurrentTime, setParsedCurrentTime] = useState('');
+    const intervalRef = useRef<NodeJS.Timeout | null>(null);
+    const timeRef = useRef<number>(0);
+
+    useEffect(() => {
+        intervalRef.current = setInterval(() => {
+            timeRef.current += 1;
+            setCurrentTime(timeRef.current);
+        }, 1000);
+
+        return () => {
+            clearInterval(intervalRef.current as NodeJS.Timeout);
+        };
+    }, []); // Runs only once on component mount
+
+    useEffect(() => {
+        setParsedCurrentTime(formatTime(currentTime));
+    }, [currentTime]); // Runs when currentTime changes
+    
+
     // Calling the fetch methods to once again get the data 
     // TODO: Make diferences between this fetch & fetching to get description
     useEffect(() => {
+
         getQuizById(params.id)
             .then((quizData) => {
                 setQuiz({ ...quiz, ...quizData });
             })
 
+
     }, [])
+
+
 
 
     // Methods related to pagination & select option for any question
@@ -56,7 +83,7 @@ function QuizWatcher({ params }: { params: { id: string } }) {
                 // general data
                 quizTitle={quiz.title}
                 currentQuestion={quiz.currentQuestion}
-                currentTime={quiz.currentTime}
+                currentTime={parsedCurrentTime}
                 totalQuestions={quiz.questions}
 
                 // specific data for any quiz

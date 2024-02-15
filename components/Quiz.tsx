@@ -1,14 +1,11 @@
 import QuizChoice from "@/components/QuizChoice"
 import Image from "next/image"
 
-const choices = [1, 2, 3, 4]
-
-
 // Props to ts
 interface QuizProps {
     quizTitle: string,
     quizQuestion: string,
-    currentTime: number,
+    currentTime: string,
     currentQuestion: number,
     totalQuestions: number,
     quizOptions: string[],
@@ -41,15 +38,7 @@ function Quiz({
 
                     <div className="bg-gray-50 flex flex-row gap-5  h-[50px] relative ">
 
-                        <div className="flex flex-row">
-                            <Image alt="" width={50} height={40} src="/icons/success.png" />
-                            <p className="font-mono text-[40px] font-bold">2</p>
-                        </div>
-
-                        <div className="flex flex-row">
-                            <Image alt="" width={50} height={40} src="/icons/cancel.png" />
-                            <p className="font-mono text-[40px] font-bold">2</p>
-                        </div>
+                        
 
                     </div>
                 </div>
