@@ -3,8 +3,12 @@ import { getQuizById } from "@/lib/actions/quiz.action";
 import { useEffect, useRef, useState } from "react";
 import Quiz from "@/components/Quiz"
 import { formatTime } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 
 function QuizWatcher({ params }: { params: { id: string } }) {
+
+    // setting up router to redirect when the user ends the quiz
+    const router = useRouter();
 
     // Storing the global state & data for the quiz
     const [quiz, setQuiz] = useState<any>({
@@ -37,7 +41,7 @@ function QuizWatcher({ params }: { params: { id: string } }) {
     useEffect(() => {
         setParsedCurrentTime(formatTime(currentTime));
     }, [currentTime]); // Runs when currentTime changes
-    
+
 
     // Calling the fetch methods to once again get the data 
     // TODO: Make diferences between this fetch & fetching to get description
@@ -57,6 +61,15 @@ function QuizWatcher({ params }: { params: { id: string } }) {
     // Methods related to pagination & select option for any question
     const nextTab = () => {
 
+        if (quiz.currentQuestion === quiz.questions) {
+            // redirecting to verification page to check results
+            const url = `/quiz/${params.id}/check/$time=${currentTime}&quizId=${params.id}&answers=${quiz.answers}`;
+            
+            console.log(url)
+            return router.push(url)
+
+        }
+
         setQuiz((prevState: any) => {
             return {
                 ...prevState,
@@ -66,10 +79,6 @@ function QuizWatcher({ params }: { params: { id: string } }) {
             }
         });
 
-
-        if (quiz.currentQuestion === quiz.totalQuestions) {
-            alert("quizended")
-        }
     }
 
     const clickOnOption = (i: number) => {
