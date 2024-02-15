@@ -11,27 +11,27 @@ export async function getLibrary() {
 
         return [
             {
-                id: "qunak",
+                id: "5f7f2a0ec38809c96b78710a",
                 title: "lorem ipsum dolir is ameth consecutor",
             },
             {
-                id: "qunaka",
+                id: "5f7f2a0ec38809c96b78710a",
                 title: "lorem ipsum dolir is ameth consecutor",
             },
             {
-                id: "qunaksa",
+                id: "5f7f2a0ec38809c96b78710a",
                 title: "lorem ipsum dolir is ameth consecutor",
             },
             {
-                id: "qunaksacw",
+                id: "5f7f2a0ec38809c96b78710a",
                 title: "lorem ipsum dolir is ameth consecutor",
             },
             {
-                id: "qunaksacac",
+                id: "5f7f2a0ec38809c96b78710a",
                 title: "lorem ipsum dolir is ameth consecutor",
             },
             {
-                id: "qunaksal2iomo",
+                id: "5f7f2a0ec38809c96b78710a",
                 title: "lorem ipsum dolir is ameth consecutor",
             },
         ]
@@ -44,10 +44,11 @@ export async function getLibrary() {
 
 export async function getQuizById(quizId: string) {
     try {
-        await connectToDatabase();
+       // await connectToDatabase();
 
-        const quiz = await Quiz.findById(quizId);
+       // const quiz = await Quiz.findById("60e07865c0858226130c8f46");
 
+       const quiz = false
         if (!quiz) {
             return {
                 title: 'Quiz de Historia Antigua',
@@ -57,19 +58,17 @@ export async function getQuizById(quizId: string) {
                 questionsList: [
                     {
                         quizQuestion: "What is the capital of France?",
-                        totalQuestions: 5,
                         quizOptions: ["Paris", "London", "Berlin", "Madrid"],
                     },
                     {
-                        quizQuestion: "What is the capital of France?",
-                        totalQuestions: 5,
+                        quizQuestion: "Are you gay?",
                         quizOptions: ["Paris", "London", "Berlin", "Madrid"],
                     },
                 ]
             }
         }
 
-        return JSON.parse(JSON.stringify(quiz));
+       // return JSON.parse(JSON.stringify(quiz));
     } catch (error) {
         handleError(error);
     }

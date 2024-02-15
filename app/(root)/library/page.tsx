@@ -14,7 +14,6 @@ async function Library() {
   // TODO: This temporarly return a mock data
 
   const library = await getLibrary() || [];
-  console.log(library)
 
   return (
     <main className="container pt-[150px] h-screen w-full " >

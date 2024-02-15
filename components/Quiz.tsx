@@ -12,6 +12,8 @@ interface QuizProps {
     currentQuestion: number,
     totalQuestions: number,
     quizOptions: string[],
+    selectedOption?: number,
+    clickOnOption: (i: number) => void,
     nextTab: () => void,
 }
 
@@ -22,6 +24,8 @@ function Quiz({
     currentTime,
     totalQuestions,
     quizOptions,
+    selectedOption,
+    clickOnOption,
     nextTab,
 }: QuizProps) {
 
@@ -73,7 +77,11 @@ function Quiz({
                     {/*-- Choices --*/}
                     <div className="flex flex-col gap-5">
                         {quizOptions.map((choice, index) => (
-                            <QuizChoice index={index} />
+                            <QuizChoice
+                                clickOnOption={(i: number) => clickOnOption(i)}
+                                isActive={selectedOption === index}
+                                index={index}
+                            />
                         ))}
                     </div>
 
