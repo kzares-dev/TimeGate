@@ -29,3 +29,21 @@ export function formatTime(seconds: number): string {
 
   return result.trim(); // Elimina espacios en blanco innecesarios
 }
+
+export const transformIntoNumber = (numbersArr: number[]) => {
+  return numbersArr.reduce((acc, num) => acc * 10 + num, 0)
+}
+
+export const parseUrlParams = (query: string) => {
+  // Decodificar la cadena URL
+  const decodedString = decodeURIComponent(query);
+
+  // Separar los pares clave-valor con "&" y convertirlos en un objeto
+  const obj = decodedString.split("&").reduce((acc: any, item: string) => {
+    const [key, value] = item.split("=");
+    acc[key] = value;
+    return acc;
+  }, {});
+
+  return obj;
+};

@@ -2,7 +2,7 @@
 import { getQuizById } from "@/lib/actions/quiz.action";
 import { useEffect, useRef, useState } from "react";
 import Quiz from "@/components/Quiz"
-import { formatTime } from "@/lib/utils";
+import { formatTime, transformIntoNumber } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 
 function QuizWatcher({ params }: { params: { id: string } }) {
@@ -51,8 +51,6 @@ function QuizWatcher({ params }: { params: { id: string } }) {
             .then((quizData) => {
                 setQuiz({ ...quiz, ...quizData });
             })
-
-
     }, [])
 
 
@@ -63,7 +61,7 @@ function QuizWatcher({ params }: { params: { id: string } }) {
 
         if (quiz.currentQuestion === quiz.questions) {
             // redirecting to verification page to check results
-            const url = `/quiz/${params.id}/check/$time=${currentTime}&quizId=${params.id}&answers=${quiz.answers}`;
+            const url = `/quiz/${params.id}/check?time=${currentTime}&answers=${transformIntoNumber(quiz.answers)}`;
             
             console.log(url)
             return router.push(url)
