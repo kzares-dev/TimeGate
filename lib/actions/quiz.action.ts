@@ -26,7 +26,23 @@ export async function getQuizById(quizId: string) {
 
         const quiz = await Quiz.findById(quizId);
         delete quiz.solutions;
-        
+
+        return JSON.parse(JSON.stringify(quiz));
+    } catch (error) {
+        handleError(error);
+    }
+}
+
+export async function getQuizDescription(quizId: string) {
+    try {
+        await connectToDatabase();
+
+        const quiz = await Quiz.findById(quizId);
+
+        // delete the innecesary data 
+        delete quiz.questionsList
+        delete quiz.solutions
+
         return JSON.parse(JSON.stringify(quiz));
     } catch (error) {
         handleError(error);
@@ -49,7 +65,7 @@ export async function createQuiz(quizData: any) {
 
 interface ValidateData {
     id: string,
-    userId: string,
+    user: string,
     time: number,
     answers: number,
 }
@@ -59,11 +75,9 @@ export async function verifyAnswers(validateData: ValidateData) {
         connectToDatabase()
 
         // first get the correct quiz
-        const quiz = await getQuizById(validateData.id)
+        const quiz = await getQuizDescription(validateData.id)
 
-        const { _id, solutions } = quiz;
-
-        // parse the solutions into arrays
+        const { solutions } = quiz;
         const quizSolutions = transformNumberIntoArray(solutions);
         const userSolutions = transformNumberIntoArray(validateData.answers);
 
@@ -74,26 +88,41 @@ export async function verifyAnswers(validateData: ValidateData) {
                 correctAnswers += 1;
             }
         })
-
         // asign the score 
         const baseScore = 10
         const penalty = 1 / validateData.time;
 
-        const finalScore = baseScore * correctAnswers * (1 + penalty);
+        const finalScore = Math.round(baseScore * correctAnswers * (1 + penalty));
 
-        // create record
-        const record = await createRecord({
-            user: validateData.userId,
+        // creating & save record
+        const record = {
+            user: validateData.user.toString(),
+            quiz: validateData.id,
+            score: finalScore,
+            time: validateData.time,
+            solutions: validateData.answers,
+        }
+
+        const newRecord = await createRecord(record);
+
+        console.log(newRecord)
+        return JSON.parse(newRecord)
+
+
+        // parse the solutions into arrays
+        /**
+         * 
+         *  const record = await createRecord({
+            user: validateData.user,
             quiz: validateData.id,
             score: finalScore,
             time: validateData.time,
             solutions: validateData.answers,
         })
 
-        return {
-            ...record,
-            ...quiz,
-        }
+
+
+         */
 
 
 

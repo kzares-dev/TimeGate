@@ -5,6 +5,7 @@ import Record from "../database/models/record.model";
 import { handleError } from "../utils";
 
 export async function createRecord(recordData: any) {
+    console.log(recordData)
     try {
         connectToDatabase();
 

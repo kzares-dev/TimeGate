@@ -1,5 +1,5 @@
 "use client";
-import { getQuizById } from "@/lib/actions/quiz.action";
+import { getQuizDescription } from "@/lib/actions/quiz.action";
 import { useEffect, useRef, useState } from "react";
 import Quiz from "@/components/Quiz"
 import { formatTime, transformIntoNumber } from "@/lib/utils";
@@ -17,10 +17,6 @@ function QuizWatcher({ params }: { params: { id: string } }) {
         selectedOption: null,
         answers: []
     });
-
-
-    // TODO: implement the correct types for all this 
-
 
     // states all related to current time
     const [currentTime, setCurrentTime] = useState(0);
@@ -45,22 +41,16 @@ function QuizWatcher({ params }: { params: { id: string } }) {
 
 
     // Calling the fetch methods to once again get the data 
-    // TODO: Make diferences between this fetch & fetching to get description
     useEffect(() => {
 
-        getQuizById(params.id)
+        getQuizDescription(params.id)
             .then((quizData) => {
                 setQuiz({ ...quiz, ...quizData });
             })
     }, [])
 
-
-
-
     // Methods related to pagination & select option for any question
     const nextTab = () => {
-
-        console.log(quiz.selectedOption)
         // sending an error when the user dont select nothing
         if (!quiz.selectedOption) {
             return toast.error("Debes seleccionar una opcion")
@@ -71,10 +61,7 @@ function QuizWatcher({ params }: { params: { id: string } }) {
             const url = `/quiz/${params.id}/check/time=${currentTime}&answers=${transformIntoNumber(quiz.answers)}`;
 
             toast.success("Sus respuestas seran enviadas a revisar")
-            return setTimeout(() => {
-                router.push(url)
-            }, 1000)
-
+            return router.push(url)
         }
 
         setQuiz((prevState: any) => {
