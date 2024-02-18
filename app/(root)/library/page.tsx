@@ -5,7 +5,7 @@ import Image from "next/image"
 
 interface LibraryItem {
   title: string,
-  id: string,
+  _id: string,
 }
 
 async function Library() {
@@ -14,6 +14,7 @@ async function Library() {
   // TODO: This temporarly return a mock data
 
   const library = await getLibrary() || [];
+  console.log(library)
 
   return (
     <main className="container pt-[150px] h-screen w-full " >
@@ -27,12 +28,12 @@ async function Library() {
         </span>
 
         <div className="grid gap-2 bg-gray-50/50 border rounded-md shadow p-5 m-4 lg:grid-cols-2 pt-10">
-          {library.map(({ title, id }: LibraryItem, index) => (
+          {library.map(({ title, _id }: LibraryItem, index) => (
             <LibraryItem
-              key={id}
+              key={_id}
               index={index}
               title={title}
-              id={id}
+              id={_id}
             />
           ))}
 

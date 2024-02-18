@@ -34,6 +34,10 @@ export const transformIntoNumber = (numbersArr: number[]) => {
   return numbersArr.reduce((acc, num) => acc * 10 + num, 0)
 }
 
+export const transformNumberIntoArray = (number: number) => {
+   return Array.from(number.toString()).map(Number);
+}
+
 export const parseUrlParams = (query: string) => {
   // Decodificar la cadena URL
   const decodedString = decodeURIComponent(query);
@@ -47,3 +51,5 @@ export const parseUrlParams = (query: string) => {
 
   return obj;
 };
+
+

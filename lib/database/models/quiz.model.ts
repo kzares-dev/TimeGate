@@ -17,13 +17,13 @@ const QuizSchema = new Schema({
         type: Number,
         required: true
     },
-    value: {
-        type: Number,
-        required: true
-    },
-    data: {
+    questionsList: {
         type: Schema.Types.Mixed,
         required: false // Puedes cambiar a true si es obligatorio
+    },
+    solutions: {
+        type: Number,
+        required: true,
     }
 });
 

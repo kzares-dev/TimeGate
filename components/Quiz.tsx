@@ -26,6 +26,7 @@ function Quiz({
     nextTab,
 }: QuizProps) {
 
+
     return (
         <div className="container flex-center h-screen">
 
@@ -67,8 +68,9 @@ function Quiz({
                     <div className="flex flex-col gap-5">
                         {quizOptions.map((choice, index) => (
                             <QuizChoice
-                                clickOnOption={(i: number) => clickOnOption(i)}
-                                isActive={selectedOption === index}
+                                choice={choice}
+                                clickOnOption={(i: number) => clickOnOption(i + 1)}
+                                isActive={selectedOption === index + 1}
                                 index={index}
                             />
                         ))}

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Quiz from "@/components/Quiz"
 import { formatTime, transformIntoNumber } from "@/lib/utils";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 function QuizWatcher({ params }: { params: { id: string } }) {
 
@@ -59,12 +60,20 @@ function QuizWatcher({ params }: { params: { id: string } }) {
     // Methods related to pagination & select option for any question
     const nextTab = () => {
 
+        console.log(quiz.selectedOption)
+        // sending an error when the user dont select nothing
+        if (!quiz.selectedOption) {
+            return toast.error("Debes seleccionar una opcion")
+        }
+
         if (quiz.currentQuestion === quiz.questions) {
             // redirecting to verification page to check results
-            const url = `/quiz/${params.id}/check?time=${currentTime}&answers=${transformIntoNumber(quiz.answers)}`;
-            
-            console.log(url)
-            return router.push(url)
+            const url = `/quiz/${params.id}/check/time=${currentTime}&answers=${transformIntoNumber(quiz.answers)}`;
+
+            toast.success("Sus respuestas seran enviadas a revisar")
+            return setTimeout(() => {
+                router.push(url)
+            }, 1000)
 
         }
 
@@ -82,7 +91,6 @@ function QuizWatcher({ params }: { params: { id: string } }) {
     const clickOnOption = (i: number) => {
         setQuiz({ ...quiz, selectedOption: i })
     }
-    // console.log(quiz.questionsList[quiz.currentQuestion])
 
     if (quiz.title) {
         return (

@@ -6,11 +6,12 @@ import { getQuizById } from "@/lib/actions/quiz.action"
 
 // this is for the intro of the quiz
 // to select another & so
-
 async function QuizWrapper({ params }: { params: { id: string } }) {
 
     // loading the params  & making a server request to fetch data
     const quiz = await getQuizById(params.id)
+
+    console.log(quiz)
 
     return (
         <div className="container flex-center h-screen gap-5 flex-col">
@@ -39,16 +40,16 @@ async function QuizWrapper({ params }: { params: { id: string } }) {
                             </div>
 
                             <div className="">
-                                <h2 className="mr-2 text-[30px] font-kalam font-thin tracking-tight"> This is the title of the quiz </h2>
-                                <span className="px-1 text-neutral-600 font-mono underline">mesopotamic era</span>
-                                <p className="text-lg text-neutral-600 pt-3 font-kalam">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim id minus molestiae eum earum incidunt nemo beatae magnam quae obcaecati.</p>
+                                <h2 className="mr-2 text-[30px] font-kalam font-thin tracking-tight"> {quiz.title} </h2>
+                                <span className="px-1 text-neutral-600 font-mono underline"> {quiz.category} </span>
+                                <p className="text-lg text-neutral-600 pt-3 font-kalam"> {quiz.description} </p>
 
                             </div>
 
                         </div>
 
                         <div className="text-4xl font-bold font-mono">
-                            0/10
+                            0/{quiz.questions}
                         </div>
 
                     </div>
@@ -74,10 +75,9 @@ async function QuizWrapper({ params }: { params: { id: string } }) {
                     </div>
 
                     {/*-- Confirm Btn --*/}
-                    <Link className="w-full" href={params.id}>
+                    <a href={`/quiz/${params.id}/start`}>
                         <button className="button py-4 mt-3 w-full">Comenzemos</button>
-                    </Link>
-
+                    </a>
                 </div>
 
 
