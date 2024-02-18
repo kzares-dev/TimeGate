@@ -3,15 +3,12 @@ import Image from "next/image"
 import Link from "@/components/Link"
 import { getQuizById } from "@/lib/actions/quiz.action"
 
-
 // this is for the intro of the quiz
 // to select another & so
 async function QuizWrapper({ params }: { params: { id: string } }) {
 
     // loading the params  & making a server request to fetch data
     const quiz = await getQuizById(params.id)
-
-    console.log(quiz)
 
     return (
         <div className="container flex-center h-screen gap-5 flex-col">

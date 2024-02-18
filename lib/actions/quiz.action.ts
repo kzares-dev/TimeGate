@@ -2,7 +2,7 @@
 import Quiz from "../database/models/quiz.model";
 import { connectToDatabase } from "../database";
 import { handleError, transformNumberIntoArray } from "../utils";
-import { createRecord } from "./record.action";
+import { createRecord, getRecord } from "./record.action";
 
 export async function getLibrary() {
 
@@ -131,4 +131,25 @@ export async function verifyAnswers(validateData: ValidateData) {
     } catch (error) {
         handleError(error);
     }
+}
+
+export async function getQuizMetrics(userId: string, quizId: string) {
+    const quiz = await getQuizById(quizId);
+    const parsedQuiz = JSON.parse(JSON.stringify(quiz));
+
+    const record = await getRecord(userId, quizId);
+    const parsedRecord = JSON.parse(JSON.stringify(record));
+
+    // implemening the transformation into array of the solutions
+    const solutionsArray = {
+        quizSolutions: transformNumberIntoArray(quiz.solutions),
+        userSolutions: transformNumberIntoArray(record.solutions)
+    }
+
+    return JSON.parse(JSON.stringify({
+        ...parsedQuiz,
+        ...parsedRecord,
+        solutionsArray,
+    }))
+
 }

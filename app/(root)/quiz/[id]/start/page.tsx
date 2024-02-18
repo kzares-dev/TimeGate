@@ -5,8 +5,15 @@ import Quiz from "@/components/Quiz"
 import { formatTime, transformIntoNumber } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import { useUser } from "@clerk/nextjs";
+import { getRecord } from "@/lib/actions/record.action";
+import Image from "next/image";
+import { motion } from "framer-motion"
 
 function QuizWatcher({ params }: { params: { id: string } }) {
+
+    // loading the id of the user to check if he alredy complete this quiz
+    const user = useUser();
 
     // setting up router to redirect when the user ends the quiz
     const router = useRouter();
@@ -43,11 +50,26 @@ function QuizWatcher({ params }: { params: { id: string } }) {
     // Calling the fetch methods to once again get the data 
     useEffect(() => {
 
-        getQuizDescription(params.id)
-            .then((quizData) => {
-                setQuiz({ ...quiz, ...quizData });
+        if (!user.user?.id) return
+
+        // check if the user alredy complete this quiz
+        getRecord(user?.user?.id.toString() || "", params.id)
+            .then((data) => {
+
+                console.log(data)
+
+                if (!data) {
+                    getQuizDescription(params.id)
+                        .then((quizData) => {
+                            setQuiz({ ...quiz, ...quizData });
+                        })
+                } else {
+                    return router.push(`/results/user=${user?.user?.id || ""}&quiz=${params.id}`)
+                }
             })
-    }, [])
+
+
+    }, [user])
 
     // Methods related to pagination & select option for any question
     const nextTab = () => {
@@ -100,6 +122,20 @@ function QuizWatcher({ params }: { params: { id: string } }) {
 
         )
     }
+
+    // makin an exit if the data is not recived
+    return (
+        <motion.div
+            initial={{ y: "40px", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ type: "twin", duration: 1 }}
+
+            className="w-full h-screen flex-center flex-col gap-3">
+            <Image src="/loaders/Book.gif" width={70} height={70} alt='' />
+            <h1 className="heading text-center"> Cargando datos nesesarios </h1>
+
+        </motion.div>
+    )
 }
 
 export default QuizWatcher
