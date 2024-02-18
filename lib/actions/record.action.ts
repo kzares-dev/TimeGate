@@ -9,6 +9,11 @@ export async function createRecord(recordData: any) {
     try {
         connectToDatabase();
 
+        // check if is any existing record
+        const pastRecord = await getRecord(recordData.user, recordData.quiz);
+       
+        if (pastRecord) return pastRecord
+
         // Create new Record
         const newRecord = new Record(recordData);
         const result = await newRecord.save();
@@ -16,5 +21,19 @@ export async function createRecord(recordData: any) {
         return result;
     } catch (error) {
         handleError(error);
+    }
+}
+
+export async function getRecord(user: string, quiz: string) {
+
+    try {
+        connectToDatabase();
+
+        const record = await Record.findOne({ user, quiz });
+        return record || false;
+
+
+    } catch (error) {
+        handleError(error)
     }
 }

@@ -78,6 +78,8 @@ export async function verifyAnswers(validateData: ValidateData) {
         const quiz = await getQuizById(validateData.id)
 
         const { solutions } = quiz;
+
+        // transforming the solutions into arrays
         const quizSolutions = transformNumberIntoArray(solutions);
         const userSolutions = transformNumberIntoArray(validateData.answers);
 
@@ -103,16 +105,25 @@ export async function verifyAnswers(validateData: ValidateData) {
             solutions: validateData.answers,
         }
 
+        // check if is any prev record 
         const newRecord = await createRecord(record);
+        const parsedRecord = JSON.parse(JSON.stringify(newRecord))
+
+        // this is needed to check if the user has a prev ans & showing 
+        // !This may be done in a propper way
+        const userSolutionsNew = transformNumberIntoArray(parsedRecord.solutions)
+
 
         return JSON.parse(JSON.stringify({
-            ...quiz,
-            ...record,
+            title: quiz.title,
+            questions: quiz.questions,
+            questionsList: quiz.questionsList,
+            ...parsedRecord,
             solutionsArray: {
                 quizSolutions,
-                userSolutions,
+                userSolutions: userSolutionsNew,
             }
-        })  )
+        }))
 
 
 
