@@ -75,7 +75,7 @@ export async function verifyAnswers(validateData: ValidateData) {
         connectToDatabase()
 
         // first get the correct quiz
-        const quiz = await getQuizDescription(validateData.id)
+        const quiz = await getQuizById(validateData.id)
 
         const { solutions } = quiz;
         const quizSolutions = transformNumberIntoArray(solutions);
@@ -105,24 +105,15 @@ export async function verifyAnswers(validateData: ValidateData) {
 
         const newRecord = await createRecord(record);
 
-        console.log(newRecord)
-        return JSON.parse(newRecord)
+        return JSON.parse(JSON.stringify({
+            ...quiz,
+            ...record,
+            solutionsArray: {
+                quizSolutions,
+                userSolutions,
+            }
+        })  )
 
-
-        // parse the solutions into arrays
-        /**
-         * 
-         *  const record = await createRecord({
-            user: validateData.user,
-            quiz: validateData.id,
-            score: finalScore,
-            time: validateData.time,
-            solutions: validateData.answers,
-        })
-
-
-
-         */
 
 
 
