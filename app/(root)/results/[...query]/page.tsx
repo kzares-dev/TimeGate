@@ -9,7 +9,6 @@ async function Results({ params }: { params: { query: string } }) {
 
     const state = await getQuizMetrics(queryParams.user.toString(), queryParams.quiz.toString())
 
-    console.log(state)
 
     return (
         <CheckedQuiz state={state} />

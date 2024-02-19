@@ -19,6 +19,34 @@ export async function createUser(user: UserParams) {
   }
 }
 
+export async function getUser(userId: string) {
+  try {
+    connectToDatabase();
+
+    const user = await User.findOne({ clerkId: userId });
+    return JSON.parse(JSON.stringify(user));
+  } catch (error) {
+    handleError(error)
+  }
+}
+
+export async function increaseUserScore(userId: string, score: number) {
+  try {
+    connectToDatabase();
+    // get the actual user 
+    const user = await getUser(userId);
+    const newUser = { ...user, score: user.score + score };
+
+    const updatedUser = User.updateOne({ clerkId: userId }, newUser);
+
+    return JSON.parse(JSON.stringify(updatedUser))
+
+
+  } catch (error) {
+    handleError(error)
+  }
+}
+
 export async function updateUser(clerkId: string, user: UserParams) {
   try {
     await connectToDatabase()
@@ -32,35 +60,3 @@ export async function updateUser(clerkId: string, user: UserParams) {
   }
 }
 
-export async function deleteUser(clerkId: string) {
-  try {
-    await connectToDatabase()
-
-    // Find user to delete
-    const userToDelete = await User.findOne({ clerkId })
-
-    if (!userToDelete) {
-      throw new Error('User not found')
-    }
-
-    // Unlink relationships
-    await Promise.all([
-      // Update the 'events' collection to remove references to the user
-      Event.updateMany(
-        { _id: { $in: userToDelete.events } },
-        { $pull: { organizer: userToDelete._id } }
-      ),
-
-      // Update the 'orders' collection to remove references to the user
-      Order.updateMany({ _id: { $in: userToDelete.orders } }, { $unset: { buyer: 1 } }),
-    ])
-
-    // Delete user
-    const deletedUser = await User.findByIdAndDelete(userToDelete._id)
-    revalidatePath('/')
-
-    return deletedUser ? JSON.parse(JSON.stringify(deletedUser)) : null
-  } catch (error) {
-    handleError(error)
-  }
-}

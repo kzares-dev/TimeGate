@@ -1,5 +1,5 @@
 import LeaderBoardPreview from '@/components/LeaderBoardPreview'
-import Popular from '@/components/Popular'
+import Feed from '@/components/Feed';
 import Image from 'next/image'
 import Link from "next/link"
 
@@ -36,7 +36,7 @@ function Home() {
 
       </div>
       <div className="grid gap-4 mt-4 md:grid-cols-2 lg:grid-cols-7">
-        <Popular />
+        <Feed />
         <LeaderBoardPreview />
       </div>
     </main>
