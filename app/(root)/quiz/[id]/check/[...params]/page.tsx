@@ -6,7 +6,6 @@ import { useUser } from "@clerk/nextjs";
 import { verifyAnswers } from "@/lib/actions/quiz.action";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
-import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import CheckedQuiz from "@/components/CheckedQuiz";
 
 function CheckSolution({ params }: any) {

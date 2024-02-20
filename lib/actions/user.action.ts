@@ -60,3 +60,19 @@ export async function updateUser(clerkId: string, user: UserParams) {
   }
 }
 
+export async function getAllUsers(page: number, limit: number) {
+  try {
+    await connectToDatabase();
+
+    const users = await User.find({})
+      .lean()
+      .skip((page - 1) * limit)
+      .limit(limit);
+
+
+    return users;
+  } catch (error) {
+    handleError(error);
+    return [];
+  }
+}
