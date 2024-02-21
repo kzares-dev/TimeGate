@@ -6,6 +6,7 @@ const RecordSchema = new Schema({
     score: { type: Number, required: true },
     time: { type: Number, required: true },
     solutions: { type: Number, required: true },
+    title: {type: String, required: true},
 
 })
 

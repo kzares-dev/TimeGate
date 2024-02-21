@@ -65,15 +65,33 @@ export async function getLeaderBoard(page: number, limit: number) {
     await connectToDatabase();
 
     const users = await User.find({})
+      .sort({ score: -1 }) // Ordenar por el campo "score" de forma descendente
       .skip((page - 1) * limit)
       .limit(limit);
-
-   // if(typeof(users) === 'object') return JSON.parse(JSON.stringify([users]))
-
 
     return JSON.parse(JSON.stringify(users));
   } catch (error) {
     handleError(error);
     return [];
+  }
+}
+
+export async function getUserRankingPlace(userId: string) {
+  try {
+      await connectToDatabase();
+
+      const user = await User.findOne({ clerkId: userId });
+      if (!user) {
+          return "Usuario no encontrado";
+      }
+
+      const userScore = user.score;
+
+      const userPlace = await User.countDocuments({ score: { $gt: userScore } }) + 1;
+
+      return userPlace;
+  } catch (error) {
+      handleError(error);
+      return "Error al obtener el ranking";
   }
 }

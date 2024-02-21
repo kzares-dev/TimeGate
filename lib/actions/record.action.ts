@@ -42,7 +42,9 @@ export async function getUserLastRecords(userId: string) {
         connectToDatabase();
 
         const records = await Record.find({ user: userId.toString() });
-        return records || [];
+        if(records.length === 0) return "No ha realizado ningun quiz hasta el momento"
+        
+        return records;
 
     } catch (error) {
         handleError(error);
