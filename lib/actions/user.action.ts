@@ -68,6 +68,8 @@ export async function getLeaderBoard(page: number, limit: number) {
       .skip((page - 1) * limit)
       .limit(limit);
 
+   // if(typeof(users) === 'object') return JSON.parse(JSON.stringify([users]))
+
 
     return JSON.parse(JSON.stringify(users));
   } catch (error) {
