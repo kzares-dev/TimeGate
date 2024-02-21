@@ -1,11 +1,10 @@
+"use client"
 import LeaderBoardPreview from '@/components/LeaderBoardPreview'
 import Feed from '@/components/Feed';
 import Image from 'next/image'
 import Link from "next/link"
 
 function Home() {
-
- 
 
   return (
     <main className="p-8 mx-auto container pt-[100px]">

@@ -6,13 +6,7 @@ import { NextResponse } from "next/server";
 // See https://clerk.com/docs/references/nextjs/auth-middleware for more information about configuring your Middleware
 export default authMiddleware({
 
-  afterAuth(auth, req, evt) {
-
-    if (auth.userId && auth.isPublicRoute) {
-      return NextResponse.redirect(new URL("/home", req.url));
-    }
-
-  },
+  
   publicRoutes: ["/"],
 });
 

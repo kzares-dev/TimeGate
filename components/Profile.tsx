@@ -14,12 +14,12 @@ function Profile() {
 
     }, [user])
 
-    if (user) return (
+    if (user?.id) return (
         <div className="flex flex-row pb-3 border-b justify-between">
 
             <div className="flex flex-center gap-4">
 
-                <img src={user.imageUrl} className="w-[60px] h-[60px] rounded-full" />
+                <img src={user?.imageUrl} className="w-[60px] h-[60px] rounded-full" />
 
                 <span className="">
                     <h1 className="text-[40px] font-kalam text-neutral-800"> {user.fullName} </h1>
@@ -44,6 +44,32 @@ function Profile() {
 
             </div>
 
+
+        </div>
+    )
+
+    return (
+        <div className="flex flex-row pb-3 border-b justify-between">
+
+            <div className="flex flex-center gap-4">
+                <div className="bg-gray-200 w-[60px] h-[60px] rounded-full animate-pulse" />
+
+                <span className="flex flex-col gap-2">
+                    <h1 className="w-[200px] h-[20px] bg-gray-100 animate-pulse rounded-md" />
+                    <h2 className="w-[100px] h-[20px] bg-gray-100 animate-pulse rounded-md" />
+                </span>
+
+            </div>
+
+            <div className="flex flex-col gap-2">
+
+                <h2 className="w-[100px] h-[25px] bg-gray-100 animate-pulse rounded-md" />
+
+
+                <h2 className="w-[100px] h-[25px] bg-gray-100 animate-pulse rounded-md" />
+
+
+            </div>
 
         </div>
     )

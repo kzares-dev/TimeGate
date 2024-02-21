@@ -60,17 +60,16 @@ export async function updateUser(clerkId: string, user: UserParams) {
   }
 }
 
-export async function getAllUsers(page: number, limit: number) {
+export async function getLeaderBoard(page: number, limit: number) {
   try {
     await connectToDatabase();
 
     const users = await User.find({})
-      .lean()
       .skip((page - 1) * limit)
       .limit(limit);
 
 
-    return users;
+    return JSON.parse(JSON.stringify(users));
   } catch (error) {
     handleError(error);
     return [];

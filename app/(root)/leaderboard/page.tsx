@@ -1,11 +1,10 @@
 "use server"
-
-import { getAllUsers } from "@/lib/actions/user.action"
+import { getLeaderBoard } from "@/lib/actions/user.action"
 import Image from "next/image";
 
 async function LeaderBoard() {
 
-    const leaderBoard = await getAllUsers(1, 10);
+    const leaderBoard = await getLeaderBoard(1, 10);
     return (
         <section className="container mt-[150px] bg-white big-border min-h-[30vh]">
 

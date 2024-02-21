@@ -28,8 +28,8 @@ function Feed() {
 
         <div className="flex flex-col gap-3 py-4">
 
-          {userRecords.map((record: any) => (
-            <span className="w-full flex-row gap-4 cursor-pointer ">
+          {userRecords.map((record: any, idx: number) => (
+            <span key={idx} className="w-full flex-row gap-4 cursor-pointer ">
 
               <div className="flex flex-row gap-2">
                 <Image src="/icons/check-black.svg" alt="" width={20} height={20} />
