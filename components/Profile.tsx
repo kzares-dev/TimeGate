@@ -45,7 +45,7 @@ function Profile() {
     }, [user?.id])
 
     if (user?.id) return (
-        <div className="flex flex-row pb-3 border-b justify-between gap-2">
+        <div className="flex flex-col lg:flex-row pb-3 border-b justify-between gap-2">
 
             <div className="flex flex-center gap-4">
 
@@ -59,7 +59,7 @@ function Profile() {
             </div>
 
 
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-row flex-between lg:flex-col gap-5 ">
 
                 {userData.rank ?
                     <span className="flex-row items-center text-[40px] font-bold font-mono  flex gap-4">
