@@ -18,13 +18,13 @@ function Feed() {
   }, [user?.id])
 
   return (
-    <div className="flex-1 w-full bg-white relative md:col-span-5 big-border min-h-[40vh] pt-5 px-3 pb-10">
+    <div className="flex-1 w-full bg-gray-50 relative md:col-span-5 big-border min-h-[40vh] pt-5 px-3 pb-10">
       <Profile />
 
       <div className="p-5 flex flex-col">
 
-        <h2 className="subheading text-2xl"> Quiz recientes: </h2>
 
+        <h2 className="subheading text-2xl"> Quiz recientes: </h2>
         <div className="flex flex-col gap-3 py-4">
 
           {/*-- This is for loading the user record --*/}
@@ -49,10 +49,10 @@ function Feed() {
 
           {/*-- If is not any itm then render shrimmer --*/}
           {!userRecords && <div className="flex flex-col gap-4">
-            <div className="w-full h-[25px] bg-gray-100 animate-pulse rounded-md " />
-            <div className="w-full h-[25px] bg-gray-100 animate-pulse rounded-md " />
-            <div className="w-full h-[25px] bg-gray-100 animate-pulse rounded-md " />
-            <div className="w-full h-[25px] bg-gray-100 animate-pulse rounded-md " />
+            <div className="w-full h-[25px] bg-gray-200 animate-pulse rounded-md " />
+            <div className="w-full h-[25px] bg-gray-200 animate-pulse rounded-md " />
+            <div className="w-full h-[25px] bg-gray-200 animate-pulse rounded-md " />
+            <div className="w-full h-[25px] bg-gray-200 animate-pulse rounded-md " />
           </div>
 
           }

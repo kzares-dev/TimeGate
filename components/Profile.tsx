@@ -26,6 +26,13 @@ function Profile() {
                     rank: data,
                 }
             }))
+            .catch(() => toast.error("Fallo al obtener datos "))
+
+    }, [user?.id])
+
+
+    useEffect(() => {
+        if(!user?.id) return
 
         getUser(user?.id)
             .then((data) => setUserData((prevState: any) => {
@@ -35,11 +42,10 @@ function Profile() {
                 }
             }))
             .catch(() => toast.error("Fallo al cargar el usuario"))
-
     }, [user?.id])
 
     if (user?.id) return (
-        <div className="flex flex-row pb-3 border-b justify-between">
+        <div className="flex flex-row pb-3 border-b justify-between gap-2">
 
             <div className="flex flex-center gap-4">
 
@@ -53,16 +59,7 @@ function Profile() {
             </div>
 
 
-            <div className="flex flex-col gap-2">
-
-                {/*
-                //  TODO:this sould be implement when the function to calculate the rank is active
-                <span className="flex-row items-center text-[40px] font-bold font-mono  flex gap-4">
-                    # rank
-                    <Image alt='' src='/icons/crown.svg' width={40} height={40} />
-
-                </span>
-                */}
+            <div className="flex flex-col gap-5">
 
                 {userData.rank ?
                     <span className="flex-row items-center text-[40px] font-bold font-mono  flex gap-4">
@@ -100,10 +97,10 @@ function Profile() {
 
             <div className="flex flex-col gap-2">
 
-                <h2 className="w-[100px] h-[25px] bg-gray-100 animate-pulse rounded-md" />
+                <h2 className="w-[100px] h-[25px] bg-gray-200 animate-pulse rounded-md" />
 
 
-                <h2 className="w-[100px] h-[25px] bg-gray-100 animate-pulse rounded-md" />
+                <h2 className="w-[100px] h-[25px] bg-gray-200 animate-pulse rounded-md" />
 
 
             </div>

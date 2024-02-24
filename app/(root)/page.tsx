@@ -6,13 +6,13 @@ import { motion, spring } from 'framer-motion'
 
 function Home() {
   return (
-    <section className='w-full min-h-screen  gap-[80px] container  flex flex-col-reverse items-start justify-start lg:flex-row lg:flex-center px-3 pt-5 ' >
+    <section className='pt-[100px] lg:pt-5 w-full min-h-screen  gap-[80px] container  flex flex-col-reverse items-start justify-start lg:flex-row lg:flex-center px-3' >
 
 
       <div className='gradient-01' />
       <div className='gradient-02' />
 
-      <div className="flex flex-1 flex-col gap-3">
+      <div className="flex flex-1 flex-col gap-10 lg:gap-3">
 
         {/*-- Content Part --*/}
         <div className="flex min-h-[20vh] items-center  my-5  gap-5 md:flex-row flex-col ">
@@ -33,7 +33,7 @@ function Home() {
               transition={{ type: "spring", delay: 0, duration: 1 }}
 
               className='text-[80px] font-mono font-bold leading-[80px] pb-5' >
-              Time Capsule
+              Atemporal
             </motion.h1>
 
             <motion.p
@@ -42,8 +42,7 @@ function Home() {
               transition={{ type: "spring", delay: .3, duration: 1 }}
 
               className="max-w-[800px] font-mono text-neutral-600">
-              Sticky Logan: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quas!
-            </motion.p>
+              Descubre el pasado y haz historia en nuestro Festival Atemporal. ¡Conviértete en el campeón del conocimiento histórico!</motion.p>
 
             <Link href="/home">
               <motion.div
@@ -52,7 +51,7 @@ function Home() {
                 transition={{ type: "spring", delay: .5, duration: 1 }}
 
                 className="mt-5 button w-[180px] text-left z-10 relative" >
-                Get Started
+                Empezemos
               </motion.div>
             </Link>
 
@@ -76,8 +75,10 @@ function Home() {
             transition={{ type: "spring", delay: 2, duration: 1 }}
 
             className=" flex flex-col xl:flex-row ml-4 px-4 py-5 border gap-4">
-            <Image src="/icons/network.png" alt='' width={80} height={80} />
-            <h2 className='max-w-[400px] text-xl font-semibold font-mono' >Here we can put come about the connectivity with other people</h2>
+            <div className="">
+              <Image src="/icons/network.png" alt='' width={80} height={80} />
+            </div>
+            <h2 className='max-w-[400px] text-xl font-semibold font-mono' >Conecta con amantes de los puzles y disfruta resolviendo desafíos juntos en nuestra plataforma. ¡Únete a una comunidad de entusiastas!</h2>
 
           </motion.div>
 
@@ -88,8 +89,10 @@ function Home() {
             className=" flex flex-col xl:flex-row ml-4 px-4 py-5 border gap-4 flex-end items-end">
 
 
-            <h2 className='max-w-[400px] text-xl font-semibold font-mono' >In this part something about the trend or something idk</h2>
-            <Image src="/icons/trending.png" alt='' width={80} height={80} />
+            <h2 className='max-w-[400px] text-xl font-semibold font-mono' >Únete a la tendencia de los festivales y participa en emocionantes eventos con nosotros.</h2>
+            <div className="">
+              <Image src="/icons/trending.png" alt='' width={80} height={80} />
+            </div>
 
           </motion.div>
 

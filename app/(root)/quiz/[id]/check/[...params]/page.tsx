@@ -11,7 +11,6 @@ import CheckedQuiz from "@/components/CheckedQuiz";
 function CheckSolution({ params }: any) {
 
   const [state, setState] = useState<any>()
-  const [loadingState, setLoadingState] = useState(true)
 
   // load clerk user
   const user = useUser();
@@ -25,6 +24,7 @@ function CheckSolution({ params }: any) {
     // build the data
     const data = {
       id: params.id,
+      title: "Quiz title", // !this is not god
       time: parseInt(urlParams.time),
       answers: parseInt(urlParams.answers),
       user: user?.user?.id,
@@ -37,10 +37,10 @@ function CheckSolution({ params }: any) {
         toast.success("Respuestas revisadas correctamente")
       })
       .catch(e => toast.error("Fallo al revisar las respuestas, pruebe refrescando la pagina"))
-      .finally(() => setLoadingState(false))
 
   }, [user.user?.id])
 
+  console.log(state)
 
   if (state) return <CheckedQuiz state={state} />
 

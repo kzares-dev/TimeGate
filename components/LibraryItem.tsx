@@ -12,7 +12,7 @@ function LibraryItem({ index, title, id }: { index: number, title: string, id: s
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ type: "spring", delay: index % 3 / 5 + 0.2, duration: 1 }}
 
-                className="flex flex-row  gap-2 "
+                className="flex flex-row  gap-2 border-b lg:border-none"
             >
                 {index % 3 === 0 ?
                     <Image src="/icons/check-black.svg" alt="" width={20} height={20} />

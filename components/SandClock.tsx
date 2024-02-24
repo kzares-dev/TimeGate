@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function SandClock() {
     return (
-        <div className="flex-1 flex flex-center w-full relative -mb-10 lg:opacity-100 -z-[1] ">
+        <div className="lg:flex hidden flex-1 flex-center w-full relative -mb-10 lg:opacity-100 -z-[1] ">
 
             {/*-- Top Notepad --*/}
             <motion.div
@@ -11,8 +11,8 @@ function SandClock() {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ type: "spring", delay: 1, duration: 1 }}
 
-                className="hidden lg:block absolute top-0 left-0 w-full h-full max-w-[300px] max-h-[150px] rounded-md shadow-lg big-border font-kalam opacity-90 ">
-                <h1>Explora desafíos contemporáneos, colabora con compañeros en tiempo real y crea un futuro lleno de victorias hoy mismo</h1>
+                className="hidden lg:block absolute top-0 left-0 w-full h-full max-w-[300px] max-h-[100px] rounded-md shadow-lg big-border font-kalam opacity-90 ">
+                <h1>Conéctate con amantes de los puzles y la historia en nuestro festival atemporal</h1>
 
 
             </motion.div>
@@ -23,8 +23,8 @@ function SandClock() {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ type: "spring", delay: 1.2, duration: 1 }}
 
-                className="bg-white absolute top-1/2 right-0 w-full h-full max-w-[300px] max-h-[150px] rounded-md shadow-lg big-border font-kalam opacity-90">
-                <h1>Descubre los enigmas olvidados, teje alianzas en un mundo ancestral y forja un futuro desde los cimientos del ayer.</h1>
+                className="bg-white absolute top-1/2 right-0 w-full h-full max-w-[300px] max-h-[100px] rounded-md shadow-lg big-border font-kalam opacity-90">
+                <h1>Sumérgete en quizzes históricos y forma parte de la comunidad festivalera.</h1>
 
 
 
@@ -38,7 +38,7 @@ function SandClock() {
                 transition={{ type: "spring", delay: 1.4, duration: 1 }}
 
                 className="hidden lg:block absolute bottom-3 right-3 left-0 w-full h-full max-w-[300px] max-h-[150px] rounded-md shadow-lg big-border font-kalam opacity-80 md:opacity-90">
-                <h1>Desafía los rompecabezas del mañana, sincroniza esfuerzos en un mundo por venir y construye un futuro brillante a través de la cooperación eterna.</h1>
+                <h1>Desafía tu mente, conquista cada puzle y conviértete en el campeón indiscutible de los desafíos mentales en nuestra plataforma.</h1>
 
 
 

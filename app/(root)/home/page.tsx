@@ -15,19 +15,19 @@ function Home() {
       <div className="grid gap-4 mt-4 md:grid-cols-2 pb-10 lg:pb-1">
 
         <Link href="/library">
-          <div className='flex-1 flex flex-col bg-gray-50 shadow-sm md-border cursor-pointer px-5 py-5 gap-2 relative' >
+          <div className='flex-1 flex flex-col bg-gray-50/10 shadow-sm md-border cursor-pointer px-5 py-5 gap-2 relative' >
 
-            <h1 className='text-4xl font-kalam font-semibold'>History Library</h1>
-            <p className='text-lg font-mono leading-tight'>Here you can review the history you have so far, and learn about what is left for you to discover.</p>
+            <h1 className='text-4xl font-kalam font-semibold'>Libreria de Historia</h1>
+            <p className='text-lg font-mono leading-tight'>Busca entre nuestra coleccion de puzles, nuevos desafios de todos los temas listos para ser explorados</p>
             <Image className='absolute top-4 right-4' alt='' src='/icons/library.svg' width={40} height={40} />
 
           </div>
         </Link>
 
-        <div className='flex-1 flex flex-col bg-gray-50 shadow-sm md-border  px-5 py-5 gap-2 relative' >
+        <div className='flex-1 flex flex-col bg-gray-50/10 shadow-sm md-border  px-5 py-5 gap-2 relative' >
 
-          <h1 className='text-4xl font-kalam font-semibold'>About Game</h1>
-          <p className='text-lg font-mono leading-tight'>Do you not know what the game is about? You can find guidance here.</p>
+          <h1 className='text-4xl font-kalam font-semibold'> Acerca del juego </h1>
+          <p className='text-lg font-mono leading-tight'>Te quedan dudas acerca de lo que trata la plataforma?</p>
           <Image className='absolute top-4 right-4' alt='' src='/icons/about.svg' width={40} height={40} />
 
         </div>

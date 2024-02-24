@@ -46,7 +46,7 @@ async function QuizWrapper({ params }: { params: { id: string } }) {
                         </div>
 
                         <div className="text-4xl font-bold font-mono">
-                            0/{quiz.questions}
+                            {quiz.questions} preguntas
                         </div>
 
                     </div>

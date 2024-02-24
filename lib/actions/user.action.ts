@@ -92,6 +92,5 @@ export async function getUserRankingPlace(userId: string) {
       return userPlace;
   } catch (error) {
       handleError(error);
-      return "Error al obtener el ranking";
   }
 }

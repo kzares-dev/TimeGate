@@ -7,12 +7,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="min-h-[100vh] main">
+    <div className="min-h-[100vh]">
       <NextTopLoader
         color="#000"
         height={4}      />
       <Navbar />
-      <div className="gradient" />
+      <div className="back-gradient" />
 
       {children}
     </div>

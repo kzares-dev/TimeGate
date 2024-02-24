@@ -45,7 +45,7 @@ function LeaderBoardPreview() {
 
         </div>
       )) : <div className="w-full flex-start flex gap-4 flex-col pt-5">
-        <div className="flex gap-4">
+      <div className="flex gap-4">
           <div className="bg-gray-200 w-[60px] h-[60px] rounded-full animate-pulse" />
 
           <span className="flex flex-col gap-2">

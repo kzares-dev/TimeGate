@@ -6,7 +6,7 @@ async function LeaderBoard() {
 
     const leaderBoard = await getLeaderBoard(1, 10);
     return (
-        <section className="container mt-[150px] bg-white big-border min-h-[30vh]">
+        <section className="container mt-[150px] bg-white/10 lg:bg-white lg:big-border min-h-[30vh]">
 
             <h1 className="heading p-4">
                 LeaderBoard

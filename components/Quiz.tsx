@@ -39,7 +39,7 @@ function Quiz({
 
                     <div className="bg-gray-50 flex flex-row gap-5  h-[50px] relative ">
 
-                        
+
 
                     </div>
                 </div>
@@ -51,7 +51,9 @@ function Quiz({
                     <div className="flex-between flex-between pb-4 border-b px-10">
 
                         <div className="flex flex-row gap-3 ">
-                            <Image src="/icons/time-travel.png" width={60} height={50} alt='' />
+                            <span className="">
+                                <Image src="/icons/time-travel.png" width={60} height={50} alt='' />
+                            </span>
                             <div className="">
                                 <h2 className="mr-2 text-[30px] font-kalam font-thin tracking-tight"> {quizQuestion} </h2>
                                 <span className="px-1 text-neutral-600"> {currentTime} </span>

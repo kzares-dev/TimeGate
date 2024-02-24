@@ -14,9 +14,9 @@ async function Library() {
 
   const library = await getLibrary() || [];
   return (
-    <main className="container pt-[150px] h-screen w-full " >
+    <main className="container pt-[150px] h-screen w-full p-5 " >
 
-      <div className="w-full  bg-white min-h-[200px] big-border px-3 py-5 pt-10">
+      <div className="w-full  bg-white/10 min-h-[200px] lg:big-border px-3 py-5 pt-10">
 
 
         <span className=" w-full flex-center flex-col">
@@ -24,7 +24,7 @@ async function Library() {
           <h1 className="heading">Explora & Descubre</h1>
         </span>
 
-        <div className="grid gap-2 bg-gray-50/50 border rounded-md shadow p-5 m-4 lg:grid-cols-2 pt-10">
+        <div className="grid gap-2 bg-gray-50/50 border rounded-md shadow p-1 lg:p-5 lg:m-4 lg:grid-cols-2 pt-3 lg:pt-10">
           {library.map(({ title, _id }: LibraryItem, index) => (
             <LibraryItem
               key={_id}

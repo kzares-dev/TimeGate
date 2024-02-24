@@ -19,7 +19,7 @@ function QuizWatcher({ params }: { params: { id: string } }) {
     const router = useRouter();
 
     // Storing the global state & data for the quiz
-    const [quiz, setQuiz] = useState<any>({
+    const [quiz, setQuiz] = useState<any>({ 
         currentQuestion: 1,
         selectedOption: null,
         answers: []
@@ -46,7 +46,6 @@ function QuizWatcher({ params }: { params: { id: string } }) {
         setParsedCurrentTime(formatTime(currentTime));
     }, [currentTime]); // Runs when currentTime changes
 
-
     // Calling the fetch methods to once again get the data 
     useEffect(() => {
 
@@ -56,20 +55,18 @@ function QuizWatcher({ params }: { params: { id: string } }) {
         getRecord(user?.user?.id.toString() || "", params.id)
             .then((data) => {
 
-                console.log(data)
-
                 if (!data) {
                     getQuizDescription(params.id)
                         .then((quizData) => {
                             setQuiz({ ...quiz, ...quizData });
                         })
                 } else {
-                    return router.push(`/results/user=${user?.user?.id || ""}&quiz=${params.id}`)
+                    return router.replace(`/results/user=${user?.user?.id || ""}&quiz=${params.id}`)
                 }
             })
 
 
-    }, [user])
+    }, [user?.user?.id])
 
     // Methods related to pagination & select option for any question
     const nextTab = () => {
