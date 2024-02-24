@@ -8,11 +8,17 @@ interface LibraryItem {
   _id: string,
 }
 
+// this is a not found item
+const notFound = {
+  _id: "not found",
+  title: "No se pudo cargar correctamente la libreria",
+}
+
 async function Library() {
 
   // Fetch the library data with a server action 
 
-  const library = await getLibrary() || [];
+  const library = await getLibrary() || [notFound];
   return (
     <main className="container pt-[150px] h-screen w-full p-5 " >
 

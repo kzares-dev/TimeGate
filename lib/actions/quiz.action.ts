@@ -70,6 +70,29 @@ interface ValidateData {
     answers: number,
 }
 
+// get a random quiz id
+export async function getRandomQuizId() {
+    try {
+        await connectToDatabase();
+
+        const totalQuizzes = await Quiz.countDocuments();
+        const randomIndex = Math.floor(Math.random() * totalQuizzes);
+
+        const randomQuiz = await Quiz.findOne().skip(randomIndex).select('_id');
+
+        if (!randomQuiz) {
+            throw new Error("No se encontró ningún quiz aleatorio.");
+        }
+
+        return randomQuiz._id;
+    } catch (error) {
+        handleError(error);
+        throw new Error("Error al obtener un quiz aleatorio");
+    }
+}
+
+// Verification of the correct ans, 
+// this method uses a combination of all others
 export async function verifyAnswers(validateData: ValidateData) {
     try {
         connectToDatabase()

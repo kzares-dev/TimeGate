@@ -3,18 +3,9 @@ import LeaderBoardPreview from '@/components/LeaderBoardPreview'
 import Feed from '@/components/Feed';
 import Image from 'next/image'
 import Link from "next/link"
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
+
 import AboutDialog from '@/components/AboutDialog';
+import RandomQuiz from '@/components/RandomQuiz';
 
 function Home() {
 
@@ -39,6 +30,8 @@ function Home() {
         <AboutDialog />
 
       </div>
+
+
       <div className="grid gap-4 mt-4 md:grid-cols-2 lg:grid-cols-7">
         <Feed />
         <LeaderBoardPreview />

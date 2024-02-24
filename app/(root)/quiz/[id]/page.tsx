@@ -2,6 +2,7 @@
 import Image from "next/image"
 import Link from "@/components/Link"
 import { getQuizById } from "@/lib/actions/quiz.action"
+import RandomQuiz from "@/components/RandomQuiz";
 
 // this is for the intro of the quiz
 // to select another & so
@@ -11,7 +12,7 @@ async function QuizWrapper({ params }: { params: { id: string } }) {
     const quiz = await getQuizById(params.id)
 
     return (
-        <div className="container flex-center h-screen gap-5 flex-col">
+        <div className="container pt-[150px] lg:pt-0 lg:flex-center h-screen gap-5 flex-col">
 
 
             <div className="min-h-[40vh] w-full flex flex-col gap-5 lg:w-[90%] mx-2">
@@ -25,14 +26,14 @@ async function QuizWrapper({ params }: { params: { id: string } }) {
                 </div>
 
                 {/*-- Body --*/}
-                <div className="flex flex-col bg-white w-full py-10 border  shadow px-3 gap-5 pt-10">
+                <div className="flex flex-col bg-white/30 w-full py-10 border  shadow px-3 gap-5 pt-10">
 
                     {/*-- About quiz --*/}
-                    <div className="flex-between flex-between pb-4 border-b px-10">
+                    <div className=" flex-col lg:flex-between  pb-4 border-b lg:px-10">
 
                         <div className="flex flex-row gap-3 ">
 
-                            <div className="flex-center">
+                            <div className="flex-center hidden md:flex">
                                 <Image src="/icons/play.png" width={80} height={30} alt='' />
                             </div>
 
@@ -45,36 +46,32 @@ async function QuizWrapper({ params }: { params: { id: string } }) {
 
                         </div>
 
-                        <div className="text-4xl font-bold font-mono">
+                        <div className="text-4xl font-bold font-mono mt-2">
                             {quiz.questions} preguntas
                         </div>
 
                     </div>
 
 
-                    {/*-- Library Buttons --*/}
-                    <div className="flex-center flex-col lg:flex-row gap-5 pt-10">
-                        <Link href="/library" className='cursor-pointer flex-1 flex flex-col  shadow-sm md-border  px-5 py-5 gap-2 relative' >
+                    <div className="flex flex-col-reverse lg:flex-col">
+                        {/*-- Library Buttons --*/}
+                        <div className="flex-center flex-col lg:flex-row gap-5 pt-10">
+                            <Link href="/library" className='cursor-pointer flex-1 flex flex-col  shadow-sm md-border  px-5 py-5 gap-2 relative' >
 
-                            <h1 className='text-4xl font-kalam font-semibold'>Libreria de Historia</h1>
-                            <p className='text-lg font-mono leading-tight'>Selecciona un desafio sobre tu epoca favorita</p>
-                            <Image className='absolute top-4 right-4' alt='' src='/icons/library.svg' width={40} height={40} />
+                                <h1 className='text-4xl font-kalam font-semibold'>Libreria de Historia</h1>
+                                <p className='text-lg font-mono leading-tight'>Selecciona un desafio sobre tu epoca favorita</p>
+                                <Image className='absolute top-4 right-4' alt='' src='/icons/library.svg' width={40} height={40} />
 
-                        </Link>
+                            </Link>
 
-                        <div className='flex-1 flex flex-col shadow-sm md-border  px-5 py-5 gap-2 relative' >
-
-                            <h1 className='text-4xl font-kalam font-semibold'>Sorprendeme!</h1>
-                            <p className='text-lg font-mono leading-tight'>Que tal intentar con un desafio aleatorio</p>
-                            <Image className='absolute top-4 right-4' alt='' src='/icons/random.png' width={40} height={40} />
-
+                            <RandomQuiz />
                         </div>
-                    </div>
 
-                    {/*-- Confirm Btn --*/}
-                    <a href={`/quiz/${params.id}/start`}>
-                        <button className="button py-4 mt-3 w-full">Comenzemos</button>
-                    </a>
+                        {/*-- Confirm Btn --*/}
+                        <a href={`/quiz/${params.id}/start`}>
+                            <button className="button py-4 mt-3 w-full">Comenzemos</button>
+                        </a>
+                    </div>
                 </div>
 
 

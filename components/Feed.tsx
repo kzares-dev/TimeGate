@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import { useUser } from "@clerk/nextjs"
 import { getUserLastRecords } from "@/lib/actions/record.action"
 import Link from "next/link"
+import RandomQuiz from "./RandomQuiz"
 
 
 function Feed() {
@@ -61,6 +62,9 @@ function Feed() {
         </div>
 
       </div>
+
+      <RandomQuiz />
+
 
     </div>
   )
