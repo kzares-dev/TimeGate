@@ -32,6 +32,8 @@ function QuizWatcher({ params }: { params: { id: string } }) {
     const timeRef = useRef<number>(0);
 
     useEffect(() => {
+        if(!quiz?.title) return
+
         intervalRef.current = setInterval(() => {
             timeRef.current += 1;
             setCurrentTime(timeRef.current);
@@ -40,7 +42,7 @@ function QuizWatcher({ params }: { params: { id: string } }) {
         return () => {
             clearInterval(intervalRef.current as NodeJS.Timeout);
         };
-    }, []); // Runs only once on component mount
+    }, [quiz.title]); // Runs only once on component mount
 
     useEffect(() => {
         setParsedCurrentTime(formatTime(currentTime));
@@ -77,7 +79,7 @@ function QuizWatcher({ params }: { params: { id: string } }) {
 
         if (quiz.currentQuestion === quiz.questions) {
             // redirecting to verification page to check results
-            const url = `/quiz/${params.id}/check/time=${currentTime}&answers=${transformIntoNumber(quiz.answers)}`;
+            const url = `/quiz/${params.id}/check/title=${quiz.title}&time=${currentTime}&answers=${transformIntoNumber(quiz.answers)}`;
 
             toast.success("Sus respuestas seran enviadas a revisar")
             return router.push(url)

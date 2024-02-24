@@ -24,7 +24,7 @@ function CheckSolution({ params }: any) {
     // build the data
     const data = {
       id: params.id,
-      title: "Quiz title", // !this is not god
+      title: urlParams.title,
       time: parseInt(urlParams.time),
       answers: parseInt(urlParams.answers),
       user: user?.user?.id,

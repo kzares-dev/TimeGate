@@ -31,7 +31,7 @@ function RandomQuiz() {
     }
 
     // verify if the random id is loaded, so, a <a> tag can be rendered
-    if (randomId) return <a href={`/quiz/${randomId}`} className='cursor-pointer flex-1 flex flex-col shadow-sm md-border  px-5 py-5 gap-2 relative' >
+    if (randomId) return <a href={`/quiz/${randomId}`} className='w-full cursor-pointer flex-1 flex flex-col shadow-sm md-border  px-5 py-5 gap-2 relative' >
         <h1 className='text-4xl font-kalam font-semibold'>Sorprendeme!</h1>
         <p className='text-lg font-mono leading-tight'>Que tal intentar con un desafio aleatorio</p>
         <Image className='absolute top-4 right-4' alt='' src='/icons/random.png' width={40} height={40} />
@@ -39,7 +39,7 @@ function RandomQuiz() {
     </a>
 
     return (
-        <div onClick={awaitRandomId} className='cursor-pointer flex-1 flex flex-col shadow-sm md-border  px-5 py-5 gap-2 relative' >
+        <div onClick={awaitRandomId} className='w-full cursor-pointer flex-1 flex flex-col shadow-sm md-border  px-5 py-5 gap-2 relative' >
             <h1 className='text-4xl font-kalam font-semibold'>Sorprendeme!</h1>
             <p className='text-lg font-mono leading-tight'>Que tal intentar con un desafio aleatorio</p>
             <Image className='absolute top-4 right-4' alt='' src='/icons/random.png' width={40} height={40} />

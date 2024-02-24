@@ -37,10 +37,7 @@ export async function increaseUserScore(userId: string, score: number) {
     const user = await getUser(userId);
     const newUser = { ...user, score: user.score + score };
 
-    const updatedUser = User.updateOne({ clerkId: userId }, newUser);
-
-    return JSON.parse(JSON.stringify(updatedUser))
-
+    User.updateOne({ clerkId: userId }, newUser);
 
   } catch (error) {
     handleError(error)

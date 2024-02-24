@@ -28,14 +28,14 @@ function Quiz({
 
 
     return (
-        <div className="container flex-center h-screen">
+        <div className="container pt-[150px] lg:pt-0 lg:flex-center h-screen">
 
 
-            <div className="min-h-[40vh] w-full flex flex-col gap-5 lg:w-[90%] mx-2">
+            <div className="min-h-[40vh] w-full flex flex-col gap-5 lg:w-[90%] lg:mx-2">
 
                 {/*-- Quiz Header --*/}
                 <div className="flex flex-between px-10 w-full">
-                    <h2 className="mr-2 text-[60px] font-kalam font-bold tracking-tight"> {quizTitle} </h2>
+                    <h2 className="mr-2 text-[35px] lg:text-[60px] font-kalam font-bold tracking-tight"> {quizTitle} </h2>
 
                     <div className="bg-gray-50 flex flex-row gap-5  h-[50px] relative ">
 
@@ -45,12 +45,12 @@ function Quiz({
                 </div>
 
                 {/*-- Quiz Body --*/}
-                <div className="flex flex-col bg-white w-full py-10 border  shadow px-3 gap-5 pt-10">
+                <div className="flex flex-col bg-white-30 lg:bg-white/50 w-full py-10 border  shadow px-3 gap-5 pt-10">
 
                     {/*-- About topic & answers check --*/}
-                    <div className="flex-between flex-between pb-4 border-b px-10">
+                    <div className="flex-between flex-between pb-4 border-b lg:px-10 gap-4">
 
-                        <div className="flex flex-row gap-3 ">
+                        <div className="flex flex-col lg:flex-row gap-3 ">
                             <span className="">
                                 <Image src="/icons/time-travel.png" width={60} height={50} alt='' />
                             </span>

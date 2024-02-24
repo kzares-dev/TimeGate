@@ -3,6 +3,7 @@ import Quiz from "../database/models/quiz.model";
 import { connectToDatabase } from "../database";
 import { handleError, transformNumberIntoArray } from "../utils";
 import { createRecord, getRecord } from "./record.action";
+import { increaseUserScore } from "./user.action";
 
 export async function getLibrary() {
 
@@ -63,12 +64,7 @@ export async function createQuiz(quizData: any) {
     }
 }
 
-interface ValidateData {
-    id: string,
-    user: string,
-    time: number,
-    answers: number,
-}
+
 
 // get a random quiz id
 export async function getRandomQuizId() {
@@ -93,6 +89,14 @@ export async function getRandomQuizId() {
 
 // Verification of the correct ans, 
 // this method uses a combination of all others
+interface ValidateData {
+    id: string,
+    user: string,
+    time: number,
+    answers: number,
+    title: string,
+}
+
 export async function verifyAnswers(validateData: ValidateData) {
     try {
         connectToDatabase()
@@ -119,8 +123,10 @@ export async function verifyAnswers(validateData: ValidateData) {
 
         const finalScore = Math.round(baseScore * correctAnswers * (1 + penalty));
 
+
         // creating & save record
         const record = {
+            title: validateData.title,
             user: validateData.user.toString(),
             quiz: validateData.id,
             score: finalScore,
@@ -133,8 +139,11 @@ export async function verifyAnswers(validateData: ValidateData) {
         const parsedRecord = JSON.parse(JSON.stringify(newRecord))
 
         // this is needed to check if the user has a prev ans & showing 
-        // !This may be done in a propper way
         const userSolutionsNew = transformNumberIntoArray(parsedRecord.solutions)
+
+
+        // saving & updating the user score
+        await increaseUserScore(validateData.user.toString(), finalScore)
 
 
         return JSON.parse(JSON.stringify({
