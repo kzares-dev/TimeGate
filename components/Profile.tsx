@@ -32,7 +32,7 @@ function Profile() {
 
 
     useEffect(() => {
-        if(!user?.id) return
+        if (!user?.id) return
 
         getUser(user?.id)
             .then((data) => setUserData((prevState: any) => {
@@ -44,8 +44,9 @@ function Profile() {
             .catch(() => toast.error("Fallo al cargar el usuario"))
     }, [user?.id])
 
+
     if (user?.id) return (
-        <div className="flex flex-col lg:flex-row pb-3 border-b justify-between gap-2">
+        <div  className="flex flex-col lg:flex-row pb-3 border-b justify-between gap-2">
 
             <div className="flex flex-center gap-4">
 
@@ -89,8 +90,8 @@ function Profile() {
                 <div className="bg-gray-200 w-[60px] h-[60px] rounded-full animate-pulse" />
 
                 <span className="flex flex-col gap-2">
-                    <h1 className="w-[200px] h-[20px] bg-gray-100 animate-pulse rounded-md" />
-                    <h2 className="w-[100px] h-[20px] bg-gray-100 animate-pulse rounded-md" />
+                    <h1 className="w-[200px] h-[20px] bg-gray-200 animate-pulse rounded-md" />
+                    <h2 className="w-[100px] h-[20px] bg-gray-200 animate-pulse rounded-md" />
                 </span>
 
             </div>

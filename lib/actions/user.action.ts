@@ -30,17 +30,33 @@ export async function getUser(userId: string) {
   }
 }
 
+export async function updateUserScore(userId: string, newScore: number) {
+  try {
+    const user = await User.findOneAndUpdate({ clerkId: userId }, { score: newScore }, { new: true });
+    if (!user) {
+      throw new Error("El usuario no fue encontrado");
+    }
+    return user;
+  } catch (error) {
+    console.error("Error al actualizar el puntaje del usuario:", error);
+    throw new Error("Hubo un error al actualizar el puntaje del usuario");
+  }
+}
+
 export async function increaseUserScore(userId: string, score: number) {
   try {
     connectToDatabase();
-    // get the actual user 
     const user = await getUser(userId);
-    const newUser = { ...user, score: user.score + score };
+    const newScore = user.score + score;
 
-    User.updateOne({ clerkId: userId }, newUser);
+    const updatedUser = await updateUserScore(userId, newScore);
 
+    return { score: updatedUser.score };
+    
   } catch (error) {
-    handleError(error)
+    // Manejar el error de forma adecuada
+    console.error("Error al incrementar el puntaje del usuario:", error);
+    throw new Error("Hubo un error al incrementar el puntaje del usuario");
   }
 }
 
@@ -75,19 +91,19 @@ export async function getLeaderBoard(page: number, limit: number) {
 
 export async function getUserRankingPlace(userId: string) {
   try {
-      await connectToDatabase();
+    await connectToDatabase();
 
-      const user = await User.findOne({ clerkId: userId });
-      if (!user) {
-          return "Usuario no encontrado";
-      }
+    const user = await User.findOne({ clerkId: userId });
+    if (!user) {
+      return "Usuario no encontrado";
+    }
 
-      const userScore = user.score;
+    const userScore = user.score;
 
-      const userPlace = await User.countDocuments({ score: { $gt: userScore } }) + 1;
+    const userPlace = await User.countDocuments({ score: { $gt: userScore } }) + 1;
 
-      return userPlace;
+    return userPlace;
   } catch (error) {
-      handleError(error);
+    handleError(error);
   }
 }

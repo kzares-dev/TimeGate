@@ -70,6 +70,7 @@ function Quiz({
                     <div className="flex flex-col gap-5">
                         {quizOptions.map((choice, index) => (
                             <QuizChoice
+                                key={index}
                                 choice={choice}
                                 clickOnOption={(i: number) => clickOnOption(i + 1)}
                                 isActive={selectedOption === index + 1}

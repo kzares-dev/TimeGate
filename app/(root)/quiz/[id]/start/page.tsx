@@ -19,7 +19,7 @@ function QuizWatcher({ params }: { params: { id: string } }) {
     const router = useRouter();
 
     // Storing the global state & data for the quiz
-    const [quiz, setQuiz] = useState<any>({ 
+    const [quiz, setQuiz] = useState<any>({
         currentQuestion: 1,
         selectedOption: null,
         answers: []
@@ -32,7 +32,7 @@ function QuizWatcher({ params }: { params: { id: string } }) {
     const timeRef = useRef<number>(0);
 
     useEffect(() => {
-        if(!quiz?.title) return
+        if (!quiz?.title) return
 
         intervalRef.current = setInterval(() => {
             timeRef.current += 1;
@@ -72,32 +72,38 @@ function QuizWatcher({ params }: { params: { id: string } }) {
 
     // Methods related to pagination & select option for any question
     const nextTab = () => {
-        // sending an error when the user dont select nothing
         if (!quiz.selectedOption) {
-            return toast.error("Debes seleccionar una opcion")
+            // Send an error message if the user has not selected an option
+            return toast.error("You must select an option");
         }
+
+        // Update the quiz answers with the selected option
+        const updatedAnswers = [...quiz.answers, quiz.selectedOption];
+        setQuiz({ ...quiz, answers: updatedAnswers });
 
         if (quiz.currentQuestion === quiz.questions) {
-            // redirecting to verification page to check results
-            const url = `/quiz/${params.id}/check/title=${quiz.title}&time=${currentTime}&answers=${transformIntoNumber(quiz.answers)}`;
+            // Redirect to the verification page to check the results
+            const url = `/quiz/${params.id}/check/title=${quiz.title}&time=${currentTime}&answers=${transformIntoNumber(updatedAnswers)}`;
 
-            toast.success("Sus respuestas seran enviadas a revisar")
-            return router.push(url)
-        }
-
-        setQuiz((prevState: any) => {
-            return {
+            toast.success("Your answers have been sent for review");
+            router.push(url);
+        } else {
+            // Update the quiz state to move to the next question
+            setQuiz((prevState:any) => ({
                 ...prevState,
                 currentQuestion: quiz.currentQuestion + 1,
-                answers: [...quiz.answers, quiz.selectedOption],
                 selectedOption: null,
-            }
-        });
+            }));
+        }
 
-    }
-
+        // Log the updated answers and their transformation for debugging
+        console.log(updatedAnswers);
+        console.log(transformIntoNumber(updatedAnswers));
+    };
     const clickOnOption = (i: number) => {
-        setQuiz({ ...quiz, selectedOption: i })
+        setQuiz((prevState: any) => {
+            return { ...prevState, selectedOption: i }
+        })
     }
 
     if (quiz.title) {

@@ -143,8 +143,8 @@ export async function verifyAnswers(validateData: ValidateData) {
 
 
         // saving & updating the user score
-        await increaseUserScore(validateData.user.toString(), finalScore)
-
+        const data = await increaseUserScore(validateData.user, finalScore)
+        console.log(data)
 
         return JSON.parse(JSON.stringify({
             title: quiz.title,

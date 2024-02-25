@@ -18,8 +18,6 @@ function Feed() {
     getUserLastRecords(user.id).then((data) => setUserRecords(data));
   }, [user?.id])
 
-
-  console.log(userRecords)
   return (
     <div className="flex-1 w-full bg-gray-50/40 relative md:col-span-5 big-border min-h-[40vh] pt-5 px-3 pb-10">
       <Profile />

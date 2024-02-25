@@ -2,6 +2,7 @@
 import { SignOutButton, SignedIn, UserButton } from "@clerk/nextjs"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 
 function Navbar() {
   return (
@@ -16,9 +17,9 @@ function Navbar() {
       <div className="flex flex-1 flex-between container">
 
         {/*-- Logo section --*/}
-        <p className="ml-2 rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px] md:block dark:border-white">
+        <Link href="/home" className="cursor-pointer ml-2 rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px] md:block dark:border-white">
           Atemporal
-        </p>
+        </Link>
 
 
         {/*-- Sign section --*/}
