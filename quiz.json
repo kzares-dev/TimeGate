@@ -1015,5 +1015,50 @@
             }
         ],
         "solutions": "2132"
+    },
+    {
+        "title": "Inventos Sorprendentes del Pasado - Quiz",
+        "description": "Descubre inventos que marcaron época con este quiz sobre innovaciones y descubrimientos revolucionarios.",
+        "category": "Historia",
+        "questions": 4,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Cuál de los siguientes inventos revolucionó la comunicación al permitir la transmisión de información a largas distancias a través de cables?",
+                "quizOptions": [
+                    "Telégrafo",
+                    "Teléfono",
+                    "Fotografía",
+                    "FAX"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué invento, patentado por Thomas Edison, cambió la forma en que iluminamos nuestro mundo?",
+                "quizOptions": [
+                    "Bombilla eléctrica",
+                    "Lámpara de queroseno",
+                    "Velas de cera",
+                    "Linterna de aceite"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué invento, desarrollado por los hermanos Wright, permitió la realización del primer vuelo controlado en la historia?",
+                "quizOptions": [
+                    "Avión",
+                    "Barco a vapor",
+                    "Coche de motor",
+                    "Bicicleta"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál de los siguientes inventos revolucionó la producción de textiles al facilitar el tejido de manera más eficiente?",
+                "quizOptions": [
+                    "Telar mecánico",
+                    "Máquina de vapor",
+                    "Molino de viento",
+                    "Máquina de coser"
+                ]
+            }
+        ],
+        "solutions": "1321"
     }
 ]
