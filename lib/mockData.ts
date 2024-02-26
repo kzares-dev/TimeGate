@@ -54,3 +54,4 @@ export const mockQuiz = {
     ],
     solutions: 11111,
 }
+

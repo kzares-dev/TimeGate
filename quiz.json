@@ -1,0 +1,1019 @@
+[
+    {
+        "title": "Cuestionario sobre la Máquina Enigma",
+        "description": "Pon a prueba tu conocimiento sobre la famosa máquina de cifrado utilizada durante la Segunda Guerra Mundial",
+        "category": "Historia",
+        "questions": 5,
+        "questionsList": [
+            {
+                "quizQuestion": "¿En qué país fue desarrollada la Máquina Enigma?",
+                "quizOptions": [
+                    "Alemania",
+                    "Estados Unidos",
+                    "Reino Unido",
+                    "Rusia"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuántos rotores tenía la versión estándar de la Máquina Enigma durante la guerra?",
+                "quizOptions": [
+                    "3",
+                    "4",
+                    "5",
+                    "6"
+                ]
+            },
+            {
+                "quizQuestion": "¿Quién lideró el equipo de criptoanalistas en Bletchley Park que logró romper el código de la Máquina Enigma?",
+                "quizOptions": [
+                    "Alan Turing",
+                    "Winston Churchill",
+                    "Douglas MacArthur",
+                    "Joseph Stalin"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál era la función de los rotores en la Máquina Enigma?",
+                "quizOptions": [
+                    "Cifrar el mensaje",
+                    "Descifrar el mensaje",
+                    "Enviar mensajes por radio",
+                    "Codificar imágenes"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué país aliado utilizó la información obtenida a través del desciframiento de la Máquina Enigma para acortar la duración de la guerra?",
+                "quizOptions": [
+                    "Reino Unido",
+                    "Estados Unidos",
+                    "Unión Soviética",
+                    "Francia"
+                ]
+            }
+        ],
+        "solutions": "12131"
+    },
+    {
+        "title": "Cuestionario sobre el Descubrimiento del ADN",
+        "description": "Pon a prueba tus conocimientos sobre el descubrimiento de la estructura del ADN.",
+        "category": "Ciencia",
+        "questions": 3,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Quiénes fueron los científicos que descubrieron la estructura del ADN en 1953?",
+                "quizOptions": [
+                    "Francis Crick y James Watson",
+                    "Marie Curie y Albert Einstein",
+                    "Gregor Mendel y Charles Darwin",
+                    "Rosalind Franklin y Galileo Galilei"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué tipo de estructura tiene la molécula de ADN?",
+                "quizOptions": [
+                    "Doble hélice",
+                    "Espiral simple",
+                    "Cuadrado",
+                    "Cadena lineal"
+                ]
+            },
+            {
+                "quizQuestion": "¿Por qué se considera el descubrimiento de la estructura del ADN tan importante para la biología y la genética?",
+                "quizOptions": [
+                    "Permite comprender la herencia genética",
+                    "Facilita la fabricación de materiales sintéticos",
+                    "No tiene relevancia científica",
+                    "Solo afecta a la química"
+                ]
+            }
+        ],
+        "solutions": "141"
+    },
+    {
+        "title": "Cuestionario sobre Marie Curie",
+        "description": "Pon a prueba tus conocimientos sobre la destacada química Marie Curie.",
+        "category": "Ciencia",
+        "questions": 3,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Por qué Marie Curie es conocida en el campo de la química?",
+                "quizOptions": [
+                    "Por descubrir los elementos radio y polonio",
+                    "Por inventar la tabla periódica de los elementos",
+                    "Por escribir un tratado sobre física cuántica",
+                    "Por fundar una universidad de ciencias"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál fue la investigación pionera de Marie Curie que le valió un premio Nobel en Química en 1911?",
+                "quizOptions": [
+                    "La radiactividad y el descubrimiento del radio",
+                    "La síntesis de nuevos compuestos químicos",
+                    "La teoría de las reacciones en cadena",
+                    "El desarrollo de la química orgánica"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuántos premios Nobel ganó Marie Curie y en qué categorías?",
+                "quizOptions": [
+                    "Dos premios Nobel: Física y Química",
+                    "Tres premios Nobel: Física, Química y Medicina",
+                    "Un premio Nobel en Química",
+                    "Ningún premio Nobel"
+                ]
+            }
+        ],
+        "solutions": "124"
+    },
+    {
+        "title": "Desafío Histórico: Revolución, Guerras y el Fin de una Era",
+        "description": "Pon a prueba tus conocimientos sobre un hecho histórico trascendental.",
+        "category": "Historia",
+        "questions": 3,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Cuál fue el evento histórico que marcó el inicio de la Revolución Francesa?",
+                "quizOptions": [
+                    "La Toma de la Bastilla",
+                    "La Guerra de los Cien Años",
+                    "El Incidente de la Noche de los Cuchillos Largos",
+                    "La Revuelta de los Comuneros"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué tratado puso fin a la Primera Guerra Mundial en 1919?",
+                "quizOptions": [
+                    "El Tratado de Versalles",
+                    "El Tratado de Trianon",
+                    "El Tratado de Brest-Litovsk",
+                    "El Tratado de Riga"
+                ]
+            },
+            {
+                "quizQuestion": "¿En qué año se produjo la caída del Muro de Berlín, marcando el fin de la Guerra Fría?",
+                "quizOptions": [
+                    "1989",
+                    "1991",
+                    "1985",
+                    "1990"
+                ]
+            }
+        ],
+        "solutions": "134"
+    },
+    {
+        "title": "El Gran Conflicto: Quiz sobre la Primera Guerra Mundial",
+        "description": "Pon a prueba tus conocimientos sobre uno de los conflictos más impactantes de la historia moderna.",
+        "category": "Historia",
+        "questions": 3,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Cuál fue el acontecimiento que desencadenó el inicio de la Primera Guerra Mundial en 1914?",
+                "quizOptions": [
+                    "El asesinato del Archiduque Francisco Fernando de Austria",
+                    "El bombardeo de Pearl Harbor",
+                    "La invasión de Polonia por Alemania",
+                    "El Tratado de Versalles"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuáles fueron las potencias conocidas como la 'Triple Entente' durante la Primera Guerra Mundial?",
+                "quizOptions": [
+                    "Francia, Reino Unido, Rusia",
+                    "Alemania, Austria-Hungría, Italia",
+                    "Estados Unidos, Japón, China",
+                    "Francia, Alemania, Italia"
+                ]
+            },
+            {
+                "quizQuestion": "¿En qué año se firmó el armisticio que puso fin a la Primera Guerra Mundial?",
+                "quizOptions": [
+                    "1918",
+                    "1921",
+                    "1915",
+                    "1924"
+                ]
+            }
+        ],
+        "solutions": "134"
+    },
+    {
+        "title": "Grandes Inventores y sus Invenciones: Quiz sobre la Historia de la Ciencia",
+        "description": "Pon a prueba tus conocimientos sobre los inventores y sus creaciones que han marcado la historia de la ciencia.",
+        "category": "Ciencia",
+        "questions": 3,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Quién inventó la bombilla eléctrica?",
+                "quizOptions": [
+                    "Thomas Edison",
+                    "Alexander Graham Bell",
+                    "Nikola Tesla",
+                    "Albert Einstein"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál de los siguientes inventos fue creado por Leonardo da Vinci?",
+                "quizOptions": [
+                    "El helicóptero",
+                    "La máquina de vapor",
+                    "El telégrafo",
+                    "La imprenta"
+                ]
+            },
+            {
+                "quizQuestion": "¿Quién es conocido como el inventor del teléfono?",
+                "quizOptions": [
+                    "Alexander Graham Bell",
+                    "Galileo Galilei",
+                    "Marie Curie",
+                    "Isaac Newton"
+                ]
+            }
+        ],
+        "solutions": "123"
+    },
+    {
+        "title": "Biografías de Personajes Famosos: Quiz sobre la Vida de Personas Destacadas",
+        "description": "Demuestra tus conocimientos sobre la vida de personajes famosos y su legado en la historia.",
+        "category": "Historia",
+        "questions": 3,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Quién fue el líder político y activista que luchó por los derechos civiles de los afroamericanos en Estados Unidos?",
+                "quizOptions": [
+                    "Martin Luther King Jr.",
+                    "Nelson Mandela",
+                    "Mahatma Gandhi",
+                    "Winston Churchill"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué científico desarrolló la teoría de la relatividad y es conocido por su famosa fórmula E=mc^2?",
+                "quizOptions": [
+                    "Albert Einstein",
+                    "Isaac Newton",
+                    "Galileo Galilei",
+                    "Charles Darwin"
+                ]
+            },
+            {
+                "quizQuestion": "¿Quién fue la pintora mexicana famosa por sus autorretratos y su estilo surrealista?",
+                "quizOptions": [
+                    "Frida Kahlo",
+                    "Georgia O'Keeffe",
+                    "Claude Monet",
+                    "Vincent van Gogh"
+                ]
+            }
+        ],
+        "solutions": "123"
+    },
+    {
+        "title": "Ciudades del Mundo y sus Monumentos: Quiz sobre Lugares Emblemáticos",
+        "description": "Pon a prueba tus conocimientos sobre ciudades famosas y sus monumentos icónicos.",
+        "category": "Geografía",
+        "questions": 3,
+        "questionsList": [
+            {
+                "quizQuestion": "¿En qué ciudad se encuentra la Torre Eiffel, uno de los monumentos más emblemáticos del mundo?",
+                "quizOptions": [
+                    "París",
+                    "Londres",
+                    "Nueva York",
+                    "Roma"
+                ]
+            },
+            {
+                "quizQuestion": "¿En qué ciudad antigua se ubica el Coliseo, un anfiteatro romano famoso por sus espectáculos de gladiadores?",
+                "quizOptions": [
+                    "Roma",
+                    "Atenas",
+                    "El Cairo",
+                    "Estambul"
+                ]
+            },
+            {
+                "quizQuestion": "¿En qué ciudad se encuentra la Ópera de Sídney, un edificio icónico con una forma distintiva de velas de barco?",
+                "quizOptions": [
+                    "Sídney",
+                    "Barcelona",
+                    "Tokio",
+                    "Río de Janeiro"
+                ]
+            }
+        ],
+        "solutions": "124"
+    },
+    {
+        "title": "Mitología Griega y Romana: Quiz sobre Dioses y Héroes",
+        "description": "Demuestra tus conocimientos sobre la mitología griega y romana con este quiz emocionante.",
+        "category": "Mitología",
+        "questions": 5,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Quién es el rey de los dioses en la mitología griega?",
+                "quizOptions": [
+                    "Zeus",
+                    "Poseidón",
+                    "Hades",
+                    "Apolo"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál es el nombre romano del dios griego del mar, Poseidón?",
+                "quizOptions": [
+                    "Neptuno",
+                    "Marte",
+                    "Júpiter",
+                    "Mercurio"
+                ]
+            },
+            {
+                "quizQuestion": "¿Quién es la diosa del amor y la belleza en la mitología griega?",
+                "quizOptions": [
+                    "Afrodita",
+                    "Atenea",
+                    "Artemisa",
+                    "Hera"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál es el nombre romano del dios griego del inframundo, Hades?",
+                "quizOptions": [
+                    "Plutón",
+                    "Baco",
+                    "Ceres",
+                    "Jano"
+                ]
+            },
+            {
+                "quizQuestion": "¿Quién es el mensajero de los dioses en la mitología griega?",
+                "quizOptions": [
+                    "Hermes",
+                    "Dionisio",
+                    "Ares",
+                    "Pan"
+                ]
+            }
+        ],
+        "solutions": "13514"
+    },
+    {
+        "title": "Descubrimientos Científicos Importantes: Quiz sobre Avances en la Ciencia",
+        "description": "Pon a prueba tus conocimientos sobre descubrimientos científicos que han marcado la historia de la ciencia.",
+        "category": "Ciencia",
+        "questions": 3,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Qué científico propuso la teoría de la relatividad, que revolucionó nuestra comprensión del espacio y el tiempo?",
+                "quizOptions": [
+                    "Albert Einstein",
+                    "Isaac Newton",
+                    "Galileo Galilei",
+                    "Marie Curie"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué descubrimiento importante realizó Alexander Fleming en 1928, que revolucionó la medicina?",
+                "quizOptions": [
+                    "Penicilina",
+                    "Vacuna contra la polio",
+                    "Teoría de la evolución",
+                    "Rayos X"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué científico propuso la teoría heliocéntrica, que afirmaba que la Tierra y los demás planetas giran alrededor del Sol?",
+                "quizOptions": [
+                    "Nicolás Copérnico",
+                    "Johannes Kepler",
+                    "Galileo Galilei",
+                    "Isaac Newton"
+                ]
+            }
+        ],
+        "solutions": "134"
+    },
+    {
+        "title": "Literatura Clásica: Quiz sobre Autores Destacados",
+        "description": "Pon a prueba tus conocimientos sobre autores destacados de la literatura clásica y sus obras más famosas.",
+        "category": "Literatura",
+        "questions": 3,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Quién es el autor de la obra 'Romeo y Julieta'?",
+                "quizOptions": [
+                    "William Shakespeare",
+                    "Miguel de Cervantes",
+                    "Fiodor Dostoievski",
+                    "Jane Austen"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál de los siguientes autores es conocido por escribir 'Don Quijote de la Mancha'?",
+                "quizOptions": [
+                    "Miguel de Cervantes",
+                    "Leo Tolstoy",
+                    "Charles Dickens",
+                    "Herman Melville"
+                ]
+            },
+            {
+                "quizQuestion": "¿Quién es el autor de la obra 'Hamlet'?",
+                "quizOptions": [
+                    "William Shakespeare",
+                    "Gabriel García Márquez",
+                    "Emily Brontë",
+                    "Franz Kafka"
+                ]
+            }
+        ],
+        "solutions": "123"
+    },
+    {
+        "title": "Películas y Premios Oscar: Quiz",
+        "description": "Pon a prueba tus conocimientos sobre películas famosas y los premios Oscar.",
+        "category": "Cine",
+        "questions": 4,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Qué película ganó el premio Oscar a la Mejor Película en 2019?",
+                "quizOptions": [
+                    "Green Book",
+                    "La La Land",
+                    "Moonlight",
+                    "The Shape of Water"
+                ]
+            },
+            {
+                "quizQuestion": "¿Quién ganó el premio Oscar a la Mejor Actriz por su papel en 'La La Land'?",
+                "quizOptions": [
+                    "Emma Stone",
+                    "Meryl Streep",
+                    "Jennifer Lawrence",
+                    "Natalie Portman"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál de estas películas ganó el premio Oscar a la Mejor Película de Animación en 2020?",
+                "quizOptions": [
+                    "Toy Story 4",
+                    "Frozen II",
+                    "Klaus",
+                    "Missing Link"
+                ]
+            },
+            {
+                "quizQuestion": "¿Quién es el director de la película 'Parasite', ganadora del premio Oscar a la Mejor Película en 2020?",
+                "quizOptions": [
+                    "Bong Joon-ho",
+                    "Martin Scorsese",
+                    "Quentin Tarantino",
+                    "Pedro Almodóvar"
+                ]
+            }
+        ],
+        "solutions": "1341"
+    },
+    {
+        "title": "Culturas y Tradiciones Globales: Quiz",
+        "description": "Pon a prueba tus conocimientos sobre costumbres y tradiciones de diferentes culturas alrededor del mundo.",
+        "category": "Cultura",
+        "questions": 4,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Cuál es el festival de colores que se celebra en la India para dar la bienvenida a la primavera?",
+                "quizOptions": [
+                    "Holi",
+                    "Diwali",
+                    "Navratri",
+                    "Dussehra"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué país es conocido por su tradición del 'Hanami', que consiste en la observación de las flores de cerezo?",
+                "quizOptions": [
+                    "China",
+                    "Japón",
+                    "Corea del Sur",
+                    "Tailandia"
+                ]
+            },
+            {
+                "quizQuestion": "¿En qué país se celebra la festividad de 'Día de Muertos' con coloridas ofrendas y desfiles para honrar a los difuntos?",
+                "quizOptions": [
+                    "México",
+                    "España",
+                    "Brasil",
+                    "Argentina"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál de los siguientes países es conocido por la tradición del 'Sinterklaas' en la que se intercambian regalos el 5 de diciembre?",
+                "quizOptions": [
+                    "Bélgica",
+                    "Países Bajos",
+                    "Alemania",
+                    "Suecia"
+                ]
+            }
+        ],
+        "solutions": "1432"
+    },
+    {
+        "title": "Curiosidades Geográficas: Quiz",
+        "description": "Explora el mundo con este quiz sobre rincones fascinantes y hechos geográficos inusuales.",
+        "category": "Geografía",
+        "questions": 4,
+        "questionsList": [
+            {
+                "quizQuestion": "¿En qué ciudad del mundo se puede encontrar un edificio con una torre que se inclina más que la Torre Pendente de Pisa?",
+                "quizOptions": [
+                    "Nueva York",
+                    "Londres",
+                    "Madrid",
+                    "Barcelona"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál es la ciudad del mundo que tiene el nombre en ruso que significa 'casa del zorro'?",
+                "quizOptions": [
+                    "Moscú",
+                    "Saint Petersburg",
+                    "Kazan",
+                    "Novosibirsk"
+                ]
+            },
+            {
+                "quizQuestion": "¿En qué país se encuentra el lago más profundo del mundo?",
+                "quizOptions": [
+                    "Estados Unidos",
+                    "Rusia",
+                    "Japón",
+                    "China"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál es la ciudad en ruta del Sol que no tiene ninguna calle con dirección norte-sur?",
+                "quizOptions": [
+                    "Cairo",
+                    "Riyadh",
+                    "Dubai",
+                    "Las Vegas"
+                ]
+            }
+        ],
+        "solutions": "4132"
+    },
+    {
+        "title": "Eventos Deportivos y Récords: Quiz",
+        "description": "¡Aprueba tu conocimiento de los grandes eventos deportivos y los récords que han sido batidos!",
+        "category": "Deportes",
+        "questions": 4,
+        "questionsList": [
+            {
+                "quizQuestion": "¿En qué ciudad se celebró la primera Olimpiada Moderna?",
+                "quizOptions": [
+                    "Atenas",
+                    "París",
+                    "Londres",
+                    "Berlín"
+                ]
+            },
+            {
+                "quizQuestion": "¿Quién es el atleta que ha ganado más medallas en los Juegos Olímpicos de la historia?",
+                "quizOptions": [
+                    "Michael Phelps",
+                    "Usain Bolt",
+                    "Serena Williams",
+                    "Lionel Messi"
+                ]
+            },
+            {
+                "quizQuestion": "¿En qué deporte se ha batido el récord de velocidad en ruedas?",
+                "quizOptions": [
+                    "Ciclismo",
+                    "Automovilismo",
+                    "Motociclismo",
+                    "Ski acrobático"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál es el récord de altura en salto de longitud en hombres?",
+                "quizOptions": [
+                    "8.90 metros",
+                    "10.82 metros",
+                    "17.52 metros",
+                    "24.75 metros"
+                ]
+            }
+        ],
+        "solutions": "1324"
+    },
+    {
+        "title": "Música: Bandas y Cantantes Famosos - Quiz",
+        "description": "Demuestra tus conocimientos sobre iconos musicales y bandas legendarias en este quiz.",
+        "category": "Música",
+        "questions": 4,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Qué banda de rock lanzó el álbum 'The Dark Side of the Moon' en 1973?",
+                "quizOptions": [
+                    "The Beatles",
+                    "Led Zeppelin",
+                    "Pink Floyd",
+                    "Queen"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué cantante es conocido como el 'Rey del Pop'?",
+                "quizOptions": [
+                    "Elvis Presley",
+                    "Michael Jackson",
+                    "Prince",
+                    "David Bowie"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál de los siguientes artistas es conocido por ser el líder de la banda 'Queen'?",
+                "quizOptions": [
+                    "Freddie Mercury",
+                    "John Lennon",
+                    "Bono",
+                    "Mick Jagger"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué famosa cantante es conocida como 'La Reina del Soul'?",
+                "quizOptions": [
+                    "Diana Ross",
+                    "Whitney Houston",
+                    "Aretha Franklin",
+                    "Tina Turner"
+                ]
+            }
+        ],
+        "solutions": "1342"
+    },
+    {
+        "title": "Cocina Internacional y Platos Típicos - Quiz",
+        "description": "Descubre delicias culinarias de diferentes partes del mundo con este quiz sobre cocina internacional.",
+        "category": "Cocina",
+        "questions": 4,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Cuál es el plato típico de Japón que consiste en arroz sazonado con vinagre, azúcar y sal, combinado con otros ingredientes como mariscos y verduras?",
+                "quizOptions": [
+                    "Sushi",
+                    "Ramen",
+                    "Tempura",
+                    "Okonomiyaki"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué plato es considerado típico de la cocina italiana, consistente en una masa en forma de disco cubierta con tomate, mozzarella y otros ingredientes al gusto?",
+                "quizOptions": [
+                    "Paella",
+                    "Lasagna",
+                    "Risotto",
+                    "Pizza"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué plato es un símbolo de la gastronomía mexicana, elaborado con tortillas de maíz dobladas y rellenas de carne, pollo o frijoles?",
+                "quizOptions": [
+                    "Tamales",
+                    "Enchiladas",
+                    "Chiles en Nogada",
+                    "Tacos"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál es el plato nacional de España, consistente en arroz con azafrán y otros ingredientes como mariscos, pollo y verduras?",
+                "quizOptions": [
+                    "Paella",
+                    "Gazpacho",
+                    "Fabada",
+                    "Tortilla Española"
+                ]
+            }
+        ],
+        "solutions": "1423"
+    },
+    {
+        "title": "Moda a lo largo de la Historia - Quiz",
+        "description": "Explora la evolución de la moda a través del tiempo con este quiz sobre tendencias y diseñadores icónicos.",
+        "category": "Moda",
+        "questions": 4,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Qué década es conocida por el surgimiento de la minifalda y el estilo psicodélico en la moda?",
+                "quizOptions": [
+                    "1950s",
+                    "1960s",
+                    "1970s",
+                    "1980s"
+                ]
+            },
+            {
+                "quizQuestion": "¿Quién es el diseñador de moda conocido por sus creaciones de vestidos de alta costura y su famoso traje de chaqueta para mujeres?",
+                "quizOptions": [
+                    "Coco Chanel",
+                    "Christian Dior",
+                    "Yves Saint Laurent",
+                    "Gianni Versace"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué prenda de vestir se hizo popular entre las mujeres en la década de 1920, desafiando las normas de la moda de la época?",
+                "quizOptions": [
+                    "Pantalones",
+                    "Corset",
+                    "Vestido largo",
+                    "Falda larga"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál de las siguientes décadas es conocida por la moda grunge, con su énfasis en la ropa informal y desaliñada?",
+                "quizOptions": [
+                    "1980s",
+                    "1990s",
+                    "2000s",
+                    "2010s"
+                ]
+            }
+        ],
+        "solutions": "2132"
+    },
+    {
+        "title": "Tecnología del Futuro: Avances y Tendencias - Quiz",
+        "description": "Descubre los avances tecnológicos que moldearán el futuro con este quiz sobre innovaciones y tendencias emergentes.",
+        "category": "Tecnología",
+        "questions": 4,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Qué tipo de vehículo propulsado por energía eléctrica se espera que revolucione el transporte urbano en el futuro?",
+                "quizOptions": [
+                    "Drones de pasajeros",
+                    "Coches voladores",
+                    "Autobuses solares",
+                    "Trenes de levitación magnética"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál es el nombre del concepto de conexión inalámbrica a internet que se prevé reemplace a la tecnología 5G en el futuro?",
+                "quizOptions": [
+                    "6G",
+                    "WiFi Ultra",
+                    "SuperNet",
+                    "HyperConnect"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué tipo de tecnología busca crear ambientes digitales que se integren con el mundo físico?",
+                "quizOptions": [
+                    "Realidad aumentada",
+                    "Realidad virtual",
+                    "Inteligencia artificial",
+                    "Computación cuántica"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál es el nombre de la tecnología que permite la transferencia de datos a alta velocidad a través de la luz?",
+                "quizOptions": [
+                    "Li-Fi",
+                    "Wi-Fi 6",
+                    "5G Plus",
+                    "LaserNet"
+                ]
+            }
+        ],
+        "solutions": "3211"
+    },
+    {
+        "title": "Arte Moderno y Artistas Contemporáneos - Quiz",
+        "description": "Explora el mundo del arte moderno y los artistas contemporáneos con este quiz sobre movimientos artísticos y obras icónicas.",
+        "category": "Arte",
+        "questions": 4,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Qué artista es conocido por su serie de cuadros de latas de sopa y por su obra 'Marilyn Monroe'?",
+                "quizOptions": [
+                    "Andy Warhol",
+                    "Jackson Pollock",
+                    "Pablo Picasso",
+                    "Salvador Dalí"
+                ]
+            },
+            {
+                "quizQuestion": "¿En qué movimiento artístico se encuentra la famosa obra 'La Persistencia de la Memoria' de Salvador Dalí?",
+                "quizOptions": [
+                    "Cubismo",
+                    "Surrealismo",
+                    "Expresionismo",
+                    "Fauvismo"
+                ]
+            },
+            {
+                "quizQuestion": "¿Quién es conocido por su arte callejero y su identidad anónima?",
+                "quizOptions": [
+                    "Banksy",
+                    "Keith Haring",
+                    "Jean-Michel Basquiat",
+                    "Yayoi Kusama"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué artista contemporáneo es famoso por sus esculturas de acero inoxidable en forma de globos inflados?",
+                "quizOptions": [
+                    "Anish Kapoor",
+                    "Jeff Koons",
+                    "Damien Hirst",
+                    "Takashi Murakami"
+                ]
+            }
+        ],
+        "solutions": "1423"
+    },
+    {
+        "title": "Arte Moderno y Artistas Contemporáneos - Quiz",
+        "description": "Explora el mundo del arte moderno y los artistas contemporáneos con este quiz sobre movimientos artísticos y obras icónicas.",
+        "category": "Arte",
+        "questions": 4,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Qué artista es conocido por su serie de cuadros de latas de sopa y por su obra 'Marilyn Monroe'?",
+                "quizOptions": [
+                    "Andy Warhol",
+                    "Jackson Pollock",
+                    "Pablo Picasso",
+                    "Salvador Dalí"
+                ]
+            },
+            {
+                "quizQuestion": "¿En qué movimiento artístico se encuentra la famosa obra 'La Persistencia de la Memoria' de Salvador Dalí?",
+                "quizOptions": [
+                    "Cubismo",
+                    "Surrealismo",
+                    "Expresionismo",
+                    "Fauvismo"
+                ]
+            },
+            {
+                "quizQuestion": "¿Quién es conocido por su arte callejero y su identidad anónima?",
+                "quizOptions": [
+                    "Banksy",
+                    "Keith Haring",
+                    "Jean-Michel Basquiat",
+                    "Yayoi Kusama"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué artista contemporáneo es famoso por sus esculturas de acero inoxidable en forma de globos inflados?",
+                "quizOptions": [
+                    "Anish Kapoor",
+                    "Jeff Koons",
+                    "Damien Hirst",
+                    "Takashi Murakami"
+                ]
+            }
+        ],
+        "solutions": "1423"
+    },
+    {
+        "title": "Destinos Turísticos Exóticos - Quiz",
+        "description": "Explora destinos de ensueño y lugares exóticos con este quiz sobre maravillas naturales y sitios turísticos únicos.",
+        "category": "Viajes",
+        "questions": 4,
+        "questionsList": [
+            {
+                "quizQuestion": "¿En qué país se encuentra la ciudad de Petra, famosa por sus antiguas construcciones esculpidas en roca rosa?",
+                "quizOptions": [
+                    "Egipto",
+                    "Jordania",
+                    "Marruecos",
+                    "Líbano"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál es el nombre de las famosas islas indonesias conocidas por sus terrazas de arroz y su paisaje exuberante?",
+                "quizOptions": [
+                    "Hawaii",
+                    "Fiyi",
+                    "Bali",
+                    "Seychelles"
+                ]
+            },
+            {
+                "quizQuestion": "¿En qué país se encuentra la ciudad de Chefchaouen, conocida por sus edificios pintados de azul y blanco?",
+                "quizOptions": [
+                    "México",
+                    "España",
+                    "Marruecos",
+                    "Grecia"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál es el nombre del parque nacional de Argentina conocido por sus cataratas y su diversa vida salvaje?",
+                "quizOptions": [
+                    "Parque Nacional Yellowstone",
+                    "Parque Nacional de los Glaciares",
+                    "Parque Nacional Iguazú",
+                    "Parque Nacional de Banff"
+                ]
+            }
+        ],
+        "solutions": "2132"
+    },
+    {
+        "title": "Datos Curiosos sobre Animales - Quiz",
+        "description": "Descubre hechos fascinantes sobre el reino animal con este quiz sobre curiosidades y peculiaridades animales.",
+        "category": "Animales",
+        "questions": 4,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Cuál es el animal más rápido del mundo?",
+                "quizOptions": [
+                    "Guepardo",
+                    "Leopardo",
+                    "Avestruz",
+                    "León"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál es el animal más grande del planeta?",
+                "quizOptions": [
+                    "Elefante Africano",
+                    "Ballena Azul",
+                    "Tiburón Ballena",
+                    "Jirafa"
+                ]
+            },
+            {
+                "quizQuestion": "¿Qué animal puede dormir hasta 3 años seguidos?",
+                "quizOptions": [
+                    "Oso perezoso",
+                    "Murciélago",
+                    "Caracol",
+                    "Canguro"
+                ]
+            },
+            {
+                "quizQuestion": "¿Cuál es el mamífero que tiene el período de gestación más largo?",
+                "quizOptions": [
+                    "Elefante",
+                    "Delfín",
+                    "Rinoceronte",
+                    "Ornitorrinco"
+                ]
+            }
+        ],
+        "solutions": "2413"
+    },
+    {
+        "title": "Grandes Exploradores y sus Viajes - Quiz",
+        "description": "Sumérgete en la historia de la exploración con este quiz sobre exploradores y sus viajes pioneros alrededor del mundo.",
+        "category": "Historia",
+        "questions": 4,
+        "questionsList": [
+            {
+                "quizQuestion": "¿Quién lideró el primer viaje que circunnavegó el mundo, demostrando que la Tierra es redonda?",
+                "quizOptions": [
+                    "Marco Polo",
+                    "Ferdinand Magallanes",
+                    "Vasco da Gama",
+                    "Cristóbal Colón"
+                ]
+            },
+            {
+                "quizQuestion": "¿Quién fue el primero en alcanzar el Polo Sur geográfico?",
+                "quizOptions": [
+                    "Roald Amundsen",
+                    "Robert Falcon Scott",
+                    "Ernest Shackleton",
+                    "Richard E. Byrd"
+                ]
+            },
+            {
+                "quizQuestion": "¿Quién fue el explorador que lideró la primera expedición que llegó al Polo Norte?",
+                "quizOptions": [
+                    "Roald Amundsen",
+                    "Robert Peary",
+                    "Richard E. Byrd",
+                    "Ernest Shackleton"
+                ]
+            },
+            {
+                "quizQuestion": "¿Quién fue el explorador que realizó la primera travesía de la Antártida?",
+                "quizOptions": [
+                    "Ernest Shackleton",
+                    "Roald Amundsen",
+                    "Robert Falcon Scott",
+                    "Richard E. Byrd"
+                ]
+            }
+        ],
+        "solutions": "2132"
+    }
+]
