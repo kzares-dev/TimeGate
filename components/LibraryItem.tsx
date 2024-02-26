@@ -10,16 +10,11 @@ function LibraryItem({ index, title, id }: { index: number, title: string, id: s
 
                 initial={{ y: "20px", opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ type: "spring", delay: index % 3 / 5 + 0.2, duration: 1 }}
+                transition={{ type: "spring", delay: index/6 + 0.2, duration: 1 }}
 
-                className="flex flex-row  gap-2 border-b lg:border-none"
+                className="flex flex-row lg:border-none "
             >
-                {index % 3 === 0 ?
-                    <Image src="/icons/check-black.svg" alt="" width={20} height={20} />
-                    : <Image src="/icons/check-white.svg" alt="" width={20} height={20} />
-                }
-
-                <p className="subheading"> {title} </p>
+                <p className="text-[20px] font-kalam text-neutral-800 lg:underline"> {index + 1}:  {title} </p>
             </motion.div>
         </Link>
     )

@@ -4,7 +4,18 @@ import Image from "next/image";
 
 async function LeaderBoard() {
 
-    const leaderBoard = await getLeaderBoard(1, 10);
+    const leaderBoard = await getLeaderBoard(1, 10) || [];
+
+    // exiting if the leaderboard is not loaded
+    if (!leaderBoard[0]?._id) return (
+        <main className="container pt-[150px] h-[100vh] w-full p-5 flex-center" >
+
+            <h1 className="heading">No se pudo cargar el ranking correctamente</h1>
+
+        </main >
+    )
+
+
     return (
         <section className="container mt-[150px] bg-white/10 lg:bg-white lg:big-border min-h-[30vh]">
 
