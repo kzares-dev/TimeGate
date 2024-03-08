@@ -12,14 +12,14 @@ async function QuizWrapper({ params }: { params: { id: string } }) {
     const quiz = await getQuizById(params.id)
 
     return (
-        <div className="container pt-[150px] lg:pt-0 lg:flex-center h-screen gap-5 flex-col">
+        <div className="lg:container pt-[150px] lg:pt-0 lg:flex-center h-screen gap-5 flex-col">
 
 
-            <div className="min-h-[40vh] w-full flex flex-col gap-5 lg:w-[90%] mx-2">
+            <div className="min-h-[40vh] w-full flex flex-col gap-5 lg:w-[90%] md:mx-2 px-1">
 
                 {/*-- Header --*/}
-                <div className="flex flex-between px-10 w-full">
-                    <h2 className="mr-2 text-[60px] font-kalam font-bold tracking-tight">Desafio preparado </h2>
+                <div className="flex flex-between lg:px-10 w-full">
+                    <h2 className="mr-2 text-[30px] lg:text-[60px] font-kalam font-bold tracking-tight">Desafio preparado </h2>
 
 
                     <Image alt="" width={80} height={40} src="/icons/quiz.svg" />
@@ -38,15 +38,15 @@ async function QuizWrapper({ params }: { params: { id: string } }) {
                             </div>
 
                             <div className="">
-                                <h2 className="mr-2 text-[30px] font-kalam font-thin tracking-tight"> {quiz.title} </h2>
+                                <h2 className="mr-2 text-[20px] md:text-[30px] font-kalam font-thin tracking-tight"> {quiz.title} </h2>
                                 <span className="px-1 text-neutral-600 font-mono underline"> {quiz.category} </span>
-                                <p className="text-lg text-neutral-600 pt-3 font-kalam"> {quiz.description} </p>
+                                <p className="text-[17px] md:text-lg text-neutral-600 pt-3 font-kalam"> {quiz.description} </p>
 
                             </div>
 
                         </div>
 
-                        <div className="text-4xl font-bold font-mono mt-2">
+                        <div className=" text-3xl md:text-4xl font-bold font-mono mt-2">
                             {quiz.questions} preguntas
                         </div>
 
@@ -58,8 +58,8 @@ async function QuizWrapper({ params }: { params: { id: string } }) {
                         <div className="flex-center flex-col lg:flex-row gap-5 pt-10">
                             <Link href="/library" className='cursor-pointer flex-1 flex flex-col  shadow-sm md-border  px-5 py-5 gap-2 relative' >
 
-                                <h1 className='text-4xl font-kalam font-semibold'>Libreria de Historia</h1>
-                                <p className='text-lg font-mono leading-tight'>Selecciona un desafio sobre tu epoca favorita</p>
+                                <h1 className='text-2xl md:text-4xl font-kalam font-semibold'>Libreria de Historia</h1>
+                                <p className='text-[17px] md:text-lg font-mono leading-tight'>Selecciona un desafio sobre tu epoca favorita</p>
                                 <Image className='absolute top-4 right-4' alt='' src='/icons/library.svg' width={40} height={40} />
 
                             </Link>

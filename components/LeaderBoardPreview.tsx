@@ -24,7 +24,7 @@ function LeaderBoardPreview() {
       </div>
 
       {/** IF the leaderboard is loaded then render a list of users */}
-      {leaderBoard[0] ? leaderBoard.map((item: any, index: number) => (
+      {leaderBoard.length > 0 ? leaderBoard.map((item: any, index: number) => (
         <div key={item.clerkId} className="flex flex-row py-4 px-2  items-center gap-5 flex-between">
 
           <div className="flex flex-center gap-4">

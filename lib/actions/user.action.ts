@@ -32,14 +32,14 @@ export async function getUser(userId: string) {
 
 export async function updateUserScore(userId: string, newScore: number) {
   try {
-    const user = await User.findOneAndUpdate({ clerkId: userId }, { score: newScore }, { new: true });
+    const user = await User.findOneAndUpdate({ clerkId: userId }, { $inc: { score: newScore, quizzes: 1 } }, { new: true });
     if (!user) {
-      throw new Error("El usuario no fue encontrado");
+      throw new Error("User not found");
     }
     return user;
   } catch (error) {
-    console.error("Error al actualizar el puntaje del usuario:", error);
-    throw new Error("Hubo un error al actualizar el puntaje del usuario");
+    console.error("Error updating user score:", error);
+    throw new Error("There was an error updating the user's score");
   }
 }
 

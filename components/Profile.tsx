@@ -50,7 +50,7 @@ function Profile() {
 
             <div className="flex flex-center gap-4">
 
-                <img src={user?.imageUrl} className="w-[30px] h-[30px] h-[60px] rounded-full" />
+                <img src={user?.imageUrl} className="w-[30px] h-[30px] md:h-[60px] md:w-[60px] rounded-full" />
 
                 <span className="">
                     <h1 className="text-[25px] md:text-[40px] font-kalam text-neutral-800"> {user.fullName} </h1>

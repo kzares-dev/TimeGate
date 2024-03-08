@@ -138,7 +138,7 @@ body:after {
   }
 
   .subheading {
-    @apply text-[25px] font-kalam font-thin text-neutral-700
+    @apply text-[18px] md:text-[25px] font-kalam font-thin text-neutral-700
   }
 
 
