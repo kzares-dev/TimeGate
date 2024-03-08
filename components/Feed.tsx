@@ -19,10 +19,10 @@ function Feed() {
   }, [user?.id])
 
   return (
-    <div className="flex-1 w-full bg-gray-50/40 relative md:col-span-5 big-border min-h-[40vh] pt-5 px-3 pb-10">
+    <div className="flex-1 w-full bg-gray-50/40 relative md:col-span-5 big-border min-h-[40vh] pt-5 md:px-3 pb-10">
       <Profile />
 
-      <div className="p-5 flex flex-col">
+      <div className="md:p-5 flex flex-col">
 
 
         <h2 className="subheading text-2xl"> Quiz recientes: </h2>
@@ -39,7 +39,7 @@ function Feed() {
                   <Image src="/icons/check-black.svg" alt="" width={20} height={20} />
 
                   <Link href={`/results/user=${user?.id}&quiz=${record.quiz}`}>
-                    <p className="subheading text-[20px]"> {record.title} </p>
+                    <p className="subheading text-[15px] md:text-[20px]"> {record.title} </p>
                   </Link>
 
                 </div>

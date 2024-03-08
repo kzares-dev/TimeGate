@@ -32,8 +32,8 @@ function RandomQuiz() {
 
     // verify if the random id is loaded, so, a <a> tag can be rendered
     if (randomId) return <a href={`/quiz/${randomId}`} className='w-full cursor-pointer flex-1 flex flex-col shadow-sm md-border  px-5 py-5 gap-2 relative' >
-        <h1 className='text-4xl font-kalam font-semibold'>Sorprendeme!</h1>
-        <p className='text-lg font-mono leading-tight'>Que tal intentar con un desafio aleatorio</p>
+        <h1 className='text-2xl md:text-4xl font-kalam font-semibold'>Sorprendeme!</h1>
+        <p className='text-[17px] md:text-lg font-mono leading-tight'>Que tal intentar con un desafio aleatorio</p>
         <Image className='absolute top-4 right-4' alt='' src='/icons/random.png' width={40} height={40} />
 
     </a>

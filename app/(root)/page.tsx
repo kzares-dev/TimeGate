@@ -14,7 +14,7 @@ function Home() {
 
       <div className="flex flex-1 flex-col gap-10 lg:gap-3">
 
-        {/*-- Content Part --*/}
+        {/*-- Content Part --*/}  
         <div className="flex min-h-[20vh] items-center  my-5  gap-5 md:flex-row flex-col">
           <motion.div
             initial={{ x: "-40px", opacity: 0 }}

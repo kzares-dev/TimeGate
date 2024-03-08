@@ -50,17 +50,17 @@ function Profile() {
 
             <div className="flex flex-center gap-4">
 
-                <img src={user?.imageUrl} className="w-[60px] h-[60px] rounded-full" />
+                <img src={user?.imageUrl} className="w-[30px] h-[30px] h-[60px] rounded-full" />
 
                 <span className="">
-                    <h1 className="text-[40px] font-kalam text-neutral-800"> {user.fullName} </h1>
-                    <h2 className="font-kalam text-[30px] text-neutral-600"> @{user.username} </h2>
+                    <h1 className="text-[25px] md:text-[40px] font-kalam text-neutral-800"> {user.fullName} </h1>
+                    <h2 className="font-kalam text-[20px] md:text-[30px] text-neutral-600"> @{user.username} </h2>
                 </span>
 
             </div>
 
 
-            <div className="flex flex-row flex-between lg:flex-col gap-5 ">
+            <div className="flex flex-col md:flex-row md:flex-between lg:flex-col gap-5 ">
 
                 {userData.rank ?
                     <span className="flex-row items-center text-[40px] font-bold font-mono  flex gap-4">

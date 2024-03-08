@@ -18,9 +18,9 @@ function LeaderBoardPreview() {
 
   return (
     <Link href="/leaderboard" className="flex-1 relative flex lg:col-span-2 bg-white h-auto big-border py-5 px-2 pl-5 flex-col cursor-pointer" >
-      <div className="text-4xl font-semibold font-kalam flex items-end  gap-4 border-b pb-4">
+      <div className="text-2xl md:text-4xl font-semibold font-kalam flex items-end  gap-4 border-b pb-4">
         <Image src="/icons/crown.svg" alt="" width={40} height={40} />
-        <h1 className="-mb-1">LeaderBoard</h1>
+        <h1 className=" md:-mb-1">LeaderBoard</h1>
       </div>
 
       {/** IF the leaderboard is loaded then render a list of users */}

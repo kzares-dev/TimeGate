@@ -20,8 +20,8 @@ function AboutDialog() {
 
             <AlertDialogTrigger className="cursor-pointer flex-1 flex flex-col bg-gray-50/10 shadow-sm md-border  px-5 py-5 gap-2 relative">
 
-                <h1 className='text-4xl font-kalam font-semibold'> Acerca del juego </h1>
-                <p className='text-lg font-mono leading-tight'>Te quedan dudas acerca de lo que trata la plataforma?</p>
+                <h1 className='text-2xl md:text-4xl font-kalam font-semibold'> Acerca del juego </h1>
+                <p className='text-[15px] md:text-lg font-mono leading-tight'>Te quedan dudas acerca de lo que trata la plataforma?</p>
                 <Image className='absolute top-4 right-4' alt='' src='/icons/about.svg' width={40} height={40} />
 
             </AlertDialogTrigger>

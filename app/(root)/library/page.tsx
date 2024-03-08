@@ -9,17 +9,14 @@ interface LibraryItem {
 }
 
 
-
 async function Library() {
 
   // Fetch the library data with a server action 
 
-  const library = await getLibrary() || []
-
-  console.log(library[0]._id)
+  const library = await getLibrary() || ""
 
   // exiting if the library is not loaded
-  if (!library[0]._id) return (
+  if (typeof (library) === 'string') return (
     <main className="container pt-[150px] h-[100vh] w-full p-5 flex-center" >
 
       <h1 className="heading">No se pudo cargar la libreria correctamente</h1>
