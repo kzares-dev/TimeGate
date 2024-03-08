@@ -28,7 +28,7 @@ function Quiz({
 
 
     return (
-        <div className="lg:container pt-[150px] lg:pt-0 lg:flex-center h-screen">
+        <div className="lg:container px-1 pt-[150px] lg:pt-0 lg:flex-center h-screen">
 
 
             <div className="min-h-[40vh] w-full flex flex-col gap-5 lg:w-[90%] lg:mx-2">
@@ -45,18 +45,18 @@ function Quiz({
                 </div>
 
                 {/*-- Quiz Body --*/}
-                <div className="flex flex-col bg-white-30 lg:bg-white/50 w-full py-10 border  shadow px-3 gap-5 pt-10">
+                <div className="flex flex-col bg-white-30 lg:bg-white/50 w-full py-10 border  shadow px-1 md:px-3 gap-5 pt-10">
 
                     {/*-- About topic & answers check --*/}
-                    <div className="flex-between flex-between pb-4 border-b lg:px-10 gap-4">
+                    <div className="flex-col md:flex-row md:flex-between  pb-4 border-b lg:px-10 gap-4">
 
                         <div className="flex flex-col lg:flex-row gap-3 ">
                             <span className="">
                                 <Image src="/icons/time-travel.png" width={60} height={50} alt='' />
                             </span>
                             <div className="">
-                                <h2 className="mr-2 text-[30px] font-kalam font-thin tracking-tight"> {quizQuestion} </h2>
-                                <span className="px-1 text-neutral-600"> {currentTime} </span>
+                                <h2 className="mr-2 text-[25px] lg:text-[30px] font-kalam font-thin tracking-tight"> {quizQuestion} </h2>
+                                <span className="px-1 text-[20px] md:text-[25px] text-neutral-600"> {currentTime} </span>
                             </div>
                         </div>
 
@@ -88,7 +88,7 @@ function Quiz({
             </div>
 
 
-        </div>
+        </div>  
     )
 }
 
