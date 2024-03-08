@@ -55,12 +55,12 @@ function Quiz({
                                 <Image src="/icons/time-travel.png" width={60} height={50} alt='' />
                             </span>
                             <div className="">
-                                <h2 className="mr-2 text-[25px] lg:text-[30px] font-kalam font-thin tracking-tight"> {quizQuestion} </h2>
+                                <h2 className="mr-2 text-[20px] lg:text-[25px] font-kalam font-thin tracking-tight"> {quizQuestion} </h2>
                                 <span className="px-1 text-[20px] md:text-[25px] text-neutral-600"> {currentTime} </span>
                             </div>
                         </div>
 
-                        <div className="text-4xl font-bold font-mono">
+                        <div className="text-2xl lg:text-4xl font-bold font-mono">
                             {currentQuestion}/{totalQuestions}
                         </div>
 

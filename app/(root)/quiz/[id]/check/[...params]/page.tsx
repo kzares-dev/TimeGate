@@ -34,13 +34,14 @@ function CheckSolution({ params }: any) {
     verifyAnswers(data)
       .then(data => {
         setState(data);
+        console.log({ data })
         toast.success("Respuestas revisadas correctamente")
       })
       .catch(e => toast.error("Fallo al revisar las respuestas, pruebe refrescando la pagina"))
 
   }, [user.user?.id])
 
-  console.log(state)
+  console.log({ state })
 
   if (state) return <CheckedQuiz state={state} />
 
