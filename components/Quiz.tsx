@@ -28,14 +28,14 @@ function Quiz({
 
 
     return (
-        <div className="container pt-[150px] lg:pt-0 lg:flex-center h-screen">
+        <div className="lg:container pt-[150px] lg:pt-0 lg:flex-center h-screen">
 
 
             <div className="min-h-[40vh] w-full flex flex-col gap-5 lg:w-[90%] lg:mx-2">
 
                 {/*-- Quiz Header --*/}
-                <div className="flex flex-between px-10 w-full">
-                    <h2 className="mr-2 text-[35px] lg:text-[60px] font-kalam font-bold tracking-tight"> {quizTitle} </h2>
+                <div className="flex flex-between lg:px-10 w-full">
+                    <h2 className="mr-2 text-[20px] md:text-[35px] lg:text-[60px] font-kalam font-bold tracking-tight"> {quizTitle} </h2>
 
                     <div className="bg-gray-50 flex flex-row gap-5  h-[50px] relative ">
 
@@ -80,7 +80,7 @@ function Quiz({
                     </div>
 
                     {/*-- Confirm Btn --*/}
-                    <button onClick={nextTab} className="button py-4 mt-3">Continue</button>
+                    <button onClick={nextTab} className="button py-4 mt-3">Continuar</button>
 
                 </div>
 

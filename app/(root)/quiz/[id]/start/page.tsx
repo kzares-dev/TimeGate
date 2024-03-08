@@ -137,7 +137,7 @@ function QuizWatcher({ params }: { params: { id: string } }) {
 
             className="w-full h-screen flex-center flex-col gap-3">
             <Image src="/loaders/Book.gif" width={70} height={70} alt='' />
-            <h1 className="heading text-center"> Cargando datos nesesarios </h1>
+            <h1 className="heading text-center"> Cargando datos necesarios </h1>
 
         </motion.div>
     )
