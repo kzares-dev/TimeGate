@@ -30,19 +30,6 @@ body:after {
   z-index: -1;
   filter: invert(1);
 }
-
-.note-card {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#aaa 10%, #fff 10%),
-    linear-gradient(to right, #000 10%, #c73030 10% 10.2%, #000 10.5%);
-  background-size: 100% 25px, 100% 100%;
-  background-repeat: repeat, no-repeat;
-  /* Add your background pattern here */
-}
-
-
-
 .gradient-01 {
   position: fixed;
   width: 404px;
@@ -127,7 +114,7 @@ body:after {
   }
 
   .container {
-    @apply max-w-[1600px] w-full mx-auto
+    @apply max-w-[1600px] w-full lg:mx-auto
   }
 
   .big-border {
@@ -147,7 +134,7 @@ body:after {
   }
 
   .heading {
-    @apply text-[60px] font-kalam font-bold
+    @apply text-[30px] lg:text-[60px] font-kalam font-bold
   }
 
   .subheading {

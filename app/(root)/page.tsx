@@ -6,7 +6,7 @@ import { motion, spring } from 'framer-motion'
 
 function Home() {
   return (
-    <section className='pt-[100px] lg:pt-5 w-full min-h-screen  gap-[80px] container  flex flex-col-reverse items-start justify-start lg:flex-row lg:flex-center px-3' >
+    <section className='pt-[100px] lg:pt-5 w-full min-h-screen  gap-[80px] container  flex flex-col-reverse lg:items-center lg:justify-start lg:flex-row lg:flex-center px-1' >
 
 
       <div className='gradient-01' />
@@ -15,7 +15,7 @@ function Home() {
       <div className="flex flex-1 flex-col gap-10 lg:gap-3">
 
         {/*-- Content Part --*/}
-        <div className="flex min-h-[20vh] items-center  my-5  gap-5 md:flex-row flex-col ">
+        <div className="flex min-h-[20vh] items-center  my-5  gap-5 md:flex-row flex-col">
           <motion.div
             initial={{ x: "-40px", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -32,7 +32,7 @@ function Home() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ type: "spring", delay: 0, duration: 1 }}
 
-              className='text-[80px] font-mono font-bold leading-[80px] pb-5' >
+              className='text-[60px] lg:text-[80px] font-mono font-bold leading-[80px] pb-5' >
               Atemporal
             </motion.h1>
 
@@ -67,14 +67,14 @@ function Home() {
           animate={{ opacity: 1 }}
           transition={{ type: "spring", delay: 2, duration: 1 }}
 
-          className='flex w-full h-auto shadow-sm py-3 px-4 flex-col gap-4 big-border pb-5'>
+          className='flex w-full h-auto shadow-sm py-3 px-1 md:px-4 flex-col gap-4 big-border pb-5'>
 
           <motion.div
             initial={{ x: "40px", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ type: "spring", delay: 2, duration: 1 }}
 
-            className=" flex flex-col xl:flex-row ml-4 px-4 py-5 border gap-4">
+            className=" flex flex-col xl:flex-row ml-4 md:px-4 py-5 border gap-4">
             <div className="">
               <Image src="/icons/network.png" alt='' width={80} height={80} />
             </div>
@@ -86,7 +86,7 @@ function Home() {
             initial={{ x: "-n40px", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ type: "spring", delay: 2, duration: 1 }}
-            className=" flex flex-col xl:flex-row ml-4 px-4 py-5 border gap-4 flex-end items-end">
+            className=" flex flex-col xl:flex-row ml-4 md:px-4 py-5 border gap-4 flex-end items-end">
 
 
             <h2 className='max-w-[400px] text-xl font-semibold font-mono' >Únete a la tendencia de los festivales y participa en emocionantes eventos con nosotros.</h2>

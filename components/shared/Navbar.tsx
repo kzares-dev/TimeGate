@@ -1,7 +1,6 @@
 "use client"
-import { SignOutButton, SignedIn, UserButton } from "@clerk/nextjs"
+import {  SignedIn, UserButton } from "@clerk/nextjs"
 import { motion } from "framer-motion"
-import Image from "next/image"
 import Link from "next/link"
 
 function Navbar() {
@@ -14,7 +13,7 @@ function Navbar() {
       className='w-full  py-4 border-b shadow-sm z-20  absolute top-0'>
 
 
-      <div className="flex flex-1 flex-between container">
+      <div className="flex-between lg:container">
 
         {/*-- Logo section --*/}
         <Link href="/home" className="cursor-pointer ml-2 rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px] md:block dark:border-white">
