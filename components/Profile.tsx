@@ -16,10 +16,18 @@ function Profile() {
 
     useEffect(() => {
         if (!user?.id) return
+        // !is necesary to make a user object, so if the user fails to be create, the server will recreate the user
+        const createUser = {
+            clerkId: user.id,
+            email: user.emailAddresses[0]?.emailAddress || '',
+            username: user.username || '',
+            photo: user.imageUrl,
+            score: 0,
+        }
 
         // get the user data
         // first we get tbe rank & the points asyncronisly
-        getUserRankingPlace(user?.id)
+        getUserRankingPlace(createUser)
             .then((data) => setUserData((prevState: any) => {
                 return {
                     ...prevState,
@@ -46,7 +54,7 @@ function Profile() {
 
 
     if (user?.id) return (
-        <div  className="flex flex-col lg:flex-row pb-3 border-b justify-between gap-2">
+        <div className="flex flex-col lg:flex-row pb-3 border-b justify-between gap-2">
 
             <div className="flex flex-center gap-4">
 
@@ -60,7 +68,7 @@ function Profile() {
             </div>
 
 
-            <div className="flex flex-col md:flex-row md:flex-between lg:flex-col gap-5 ">
+            <div className="flex flex-col md:flex-row lg:flex-col gap-5 ">
 
                 {userData.rank ?
                     <span className="flex-row items-center text-[40px] font-bold font-mono  flex gap-4">

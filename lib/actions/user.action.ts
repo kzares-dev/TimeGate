@@ -32,7 +32,7 @@ export async function getUser(userId: string) {
 
 export async function updateUserScore(userId: string, newScore: number) {
   try {
-    const user = await User.findOneAndUpdate({ clerkId: userId }, { $inc: { score: newScore, quizzes: 1 } }, { new: true });
+    const user = await User.findOneAndUpdate({ clerkId: userId }, { $inc: { score: newScore } }, { new: true });
     if (!user) {
       throw new Error("User not found");
     }
@@ -52,7 +52,7 @@ export async function increaseUserScore(userId: string, score: number) {
     const updatedUser = await updateUserScore(userId, newScore);
 
     return { score: updatedUser.score };
-    
+
   } catch (error) {
     // Manejar el error de forma adecuada
     console.error("Error al incrementar el puntaje del usuario:", error);
@@ -89,16 +89,20 @@ export async function getLeaderBoard(page: number, limit: number) {
   }
 }
 
-export async function getUserRankingPlace(userId: string) {
+export async function getUserRankingPlace(user: UserParams) {
   try {
     await connectToDatabase();
 
-    const user = await User.findOne({ clerkId: userId });
-    if (!user) {
-      return "Usuario no encontrado";
+    const userFinded = await User.findOne({ clerkId: user.clerkId });
+
+    // if the user dosent exists, this function will create it
+    if (!userFinded) {
+      const userCreated = await createUser(user);
+      const userRankingPlace = await User.countDocuments({ score: { $gt: userCreated.score } }) + 1;
+      return userRankingPlace
     }
 
-    const userScore = user.score;
+    const userScore = userFinded.score;
 
     const userPlace = await User.countDocuments({ score: { $gt: userScore } }) + 1;
 
