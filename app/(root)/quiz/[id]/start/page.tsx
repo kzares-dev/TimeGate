@@ -70,6 +70,37 @@ function QuizWatcher({ params }: { params: { id: string } }) {
 
     }, [user?.user?.id])
 
+    // scroll to top funcionality 
+    const scrollToTop = () => {
+        const scrollStep = window.scrollY / 20;
+
+        const scrollAnimation = () => {
+            if (window.scrollY !== 0) {
+                window.scrollTo(0, window.scrollY - scrollStep);
+                window.requestAnimationFrame(scrollAnimation);
+            }
+        };
+
+        window.requestAnimationFrame(scrollAnimation);
+    };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > window.innerHeight) {
+                // Show button to scroll to top
+            } else {
+                // Hide button
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+
     // Methods related to pagination & select option for any question
     const nextTab = () => {
         if (!quiz.selectedOption) {
@@ -88,8 +119,9 @@ function QuizWatcher({ params }: { params: { id: string } }) {
             toast.success("Your answers have been sent for review");
             router.push(url);
         } else {
+            scrollToTop()
             // Update the quiz state to move to the next question
-            setQuiz((prevState:any) => ({
+            setQuiz((prevState: any) => ({
                 ...prevState,
                 currentQuestion: quiz.currentQuestion + 1,
                 selectedOption: null,
