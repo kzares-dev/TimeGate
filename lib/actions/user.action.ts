@@ -30,18 +30,6 @@ export async function getUser(userId: string) {
   }
 }
 
-export async function updateUserScore(userId: string, newScore: number) {
-  try {
-    const user = await User.findOneAndUpdate({ clerkId: userId }, { $inc: { score: newScore } }, { new: true });
-    if (!user) {
-      throw new Error("User not found");
-    }
-    return user;
-  } catch (error) {
-    console.error("Error updating user score:", error);
-    throw new Error("There was an error updating the user's score");
-  }
-}
 
 export async function increaseUserScore(userId: string, score: number) {
   try {
@@ -49,7 +37,7 @@ export async function increaseUserScore(userId: string, score: number) {
     const user = await getUser(userId);
     const newScore = user.score + score;
 
-    const updatedUser = await updateUserScore(userId, newScore);
+    const updatedUser = await User.findOneAndUpdate({ clerkId: userId },  { score: newScore } );
 
     return { score: updatedUser.score };
 

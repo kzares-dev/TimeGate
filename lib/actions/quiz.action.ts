@@ -122,8 +122,13 @@ export async function verifyAnswers(validateData: ValidateData) {
         const penalty = 1 / validateData.time;
 
         const finalScore = Math.round(baseScore * correctAnswers * (1 + penalty));
+        console.log(finalScore)
+        // !important , check if there is no record created
+        const pastReecord = await getRecord(validateData.user, validateData.id)
 
+        if (pastReecord._id) return "record alredy exists"
 
+        // if record dosent exists, will be created & update the user score
         // creating & save record
         const record = {
             title: validateData.title,
@@ -144,7 +149,7 @@ export async function verifyAnswers(validateData: ValidateData) {
 
         // saving & updating the user score
         const data = await increaseUserScore(validateData.user, finalScore)
-        console.log(data)
+        console.log({ userScoreIncreased: data })
 
         return JSON.parse(JSON.stringify({
             title: quiz.title,

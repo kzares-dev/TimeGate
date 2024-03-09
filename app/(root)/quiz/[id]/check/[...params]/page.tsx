@@ -7,13 +7,15 @@ import { verifyAnswers } from "@/lib/actions/quiz.action";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import CheckedQuiz from "@/components/CheckedQuiz";
+import { useRouter } from "next/navigation";
 
 function CheckSolution({ params }: any) {
 
   const [state, setState] = useState<any>()
+  const router = useRouter()
 
   // load clerk user
-  const user = useUser();
+  const user = useUser(); 
 
   // check the answers based on the params
   useEffect(() => {
@@ -33,6 +35,12 @@ function CheckSolution({ params }: any) {
     // & retrive the data
     verifyAnswers(data)
       .then(data => {
+        // check if the record alredy exists and redirecting
+        if(data === "record alredy exists") {
+          toast.success("Espere mientras se cargan sus resultados")
+          return router.replace(`/results/user=${user?.user?.id || ""}&quiz=${params.id}`)
+        }
+
         setState(data);
         console.log({ data })
         toast.success("Respuestas revisadas correctamente")
