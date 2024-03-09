@@ -51,7 +51,7 @@ function Home() {
                 transition={{ type: "spring", delay: .5, duration: 1 }}
 
                 className="mt-5 button w-[180px] text-left z-10 relative" >
-                Empezemos
+                Empecemos
               </motion.div>
             </Link>
 
