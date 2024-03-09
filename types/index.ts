@@ -4,5 +4,4 @@ export type UserParams = {
     email: string
     username: string
     photo: string
-    quizzes: number
 }
